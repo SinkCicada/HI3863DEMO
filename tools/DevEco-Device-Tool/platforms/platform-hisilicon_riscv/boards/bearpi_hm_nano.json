@@ -1,0 +1,248 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "900000000L",
+        "mcu": "Hi3861",
+        "device_level": 0
+    },
+    "memory": {
+        "mcu": {
+            "size": "0x200000"
+        }
+    },
+    "debug": {
+        "jlink_target": "RISC-V",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": [
+            "gdb"
+        ],
+        "entry_point": "0x40d3c0"
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "bearpi_hm_nano"
+            },
+            "products": [
+                "smart_flower_machine@team_x",
+                "bearpi_hm_nano@bearpi"
+            ],
+            "board_alias": [
+                "bearpi_hm_nano"
+            ]
+        },
+        "hpm": {
+            "build": {
+                "target": "BearPi-HM_Nano"
+            },
+            "output_bin": {
+                "app": "out/BearPi-HM_Nano/Hi3861_wifiiot_app_allinone.bin"
+            },
+            "analysis_bin": {
+                "elf": "out/BearPi-HM_Nano/Hi3861_wifiiot_app.out",
+                "map": "out/BearPi-HM_Nano/Hi3861_wifiiot_app.map"
+            },
+            "gcc_riscv32_path": "ohos_bundles/@ohos/gcc_riscv32/gcc_riscv32/bin",
+            "bundles": [
+                "@opensource/bearpi_hm_nano_smoke",
+                "@opensource/bearpi_hm_nano_gas",
+                "@opensource/bearpi_hm_nano_tvoc",
+                "@opensource/bearpi_hm_nano_curtain",
+                "@opensource/bearpi_hm_nano_flower_machine",
+                "@opensource/bearpi_hm_nano_fan",
+                "@opensource/bearpi_hm_nano_watch",
+                "@opensource/bearpi_hm_nano_lamp",
+                "@bearpi/bearpi_hm_nano",
+                "@bearpi/bearpi_hm_nano_1_1_0",
+                "@bearpi/bearpi_hm_nano_smoke",
+                "@bearpi/bearpi_hm_nano_agriculture",
+                "@bearpi/bearpi_hm_nano_flower",
+                "@bearpi/bearpi_hm_nano_light",
+                "@bearpi/bearpi_hm_nano_manhole_cover",
+                "@bearpi/bearpi_hm_nano_hcia",
+                "@bearpi/bearpi_hm_nano_infrared",
+                "@opensource/bearpi_hm_nano_switch"
+            ],
+            "board_alias": [
+                "bearpi_hm_nano"
+            ]
+        }
+    },
+    "name": "BearPi-HM Nano",
+    "platforms": [
+        "hisilicon_riscv"
+    ],
+    "upload": {
+        "framework_partition": {
+            "smart_flower_machine@team_x": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_flower_machine/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_flower_machine/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_flower_machine/Hi3861_wifiiot_app.map"
+                }
+            },
+            "bearpi_hm_nano@bearpi": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@bearpi/bearpi_hm_nano": {
+                "output_bin": {
+                    "app": "out/BearPi-HM_Nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/BearPi-HM_Nano/Hi3861_wifiiot_app.out",
+                    "map": "out/BearPi-HM_Nano/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_smoke": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_smoke_sensation/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_smoke_sensation/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_smoke_sensation/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_gas": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_gas_detection/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_gas_detection/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_gas_detection/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_tvoc": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_TVOC_detection/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_TVOC_detection/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_TVOC_detection/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_curtain": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_curtain/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_curtain/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_curtain/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_flower_machine": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_flower_machine/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_flower_machine/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_flower_machine/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_fan": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_fan/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_fan/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_fan/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_watch": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_watch/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_watch/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_watch/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_lamp": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/smart_lamp/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/smart_lamp/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/smart_lamp/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/bearpi_hm_nano_switch": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@bearpi/bearpi_hm_nano_1_1_0": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@bearpi/bearpi_hm_nano_agriculture": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@bearpi/bearpi_hm_nano_flower": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@bearpi/bearpi_hm_nano_hcia": {
+                "output_bin": {
+                    "app": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.out",
+                    "map": "out/bearpi_hm_nano/bearpi_hm_nano/Hi3861_wifiiot_app.map"
+                }
+            }
+        },
+        "partition_types": {
+            "app": {
+                "non_erasable": true
+            }
+        },
+        "speed": 921600,
+        "delay": {
+            "time": 300
+        },
+        "suite_tool": false,
+        "protocol": "hiburn-serial",
+        "protocols": [
+            "hiburn-serial"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": [
+        "linux"
+    ],
+    "url": "https://hpm.harmonyos.com/?utm_source=deveco-device-tool&utm_medium=devecohome#/en/distribution/@bearpi%2Fbearpi_hm_nano",
+    "vendor": "HiSilicon"
+}

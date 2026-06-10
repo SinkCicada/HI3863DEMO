@@ -1,0 +1,198 @@
+{
+    "hi3516dv300": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "hi3861": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "bearpi_hm_nano": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "hi3061hv100": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "hi3061lv100": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "hi3065hv100": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "wf_h861_rta1": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    },
+    "5gnbv100": {
+        "tool_burn": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "HiBurn.exe"
+        }
+    },
+    "t507": {
+        "awflash": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "awflash.exe"
+        }
+    },
+    "apollo4ble": {
+        "tool_jlink": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "Jlink.exe"
+        }
+    },
+    "bes2600w": {
+        "dldtool": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "dldtool.exe.exe"
+        }
+    },
+    "bl602": {
+        "bflb_eflash_loader": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "bflb_eflash_loader.exe"
+        }
+    },
+    "hh_scdy100": {
+        "tool_dayu_downloader": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "CmdDloader.exe"
+        }
+    },
+    "nrf52840-dk": {
+        "tool_nrfjprog": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "nrfjprog.exe"
+        }
+    },
+    "imx6ull": {
+        "uuu": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "uuu.exe"
+        }
+    },
+    "rtl8720": {
+        "amebazpgtool": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "AmebaZII_PGTool_v1.2.39.exe"
+        }
+    },
+    "hh_scdy200": {
+        "tool_upgrade": {
+            "windows": "tool_upgrade-2.1.0-win32.zip",
+            "version": "2.1.0",
+            "hpm_name":"@hihope/upgrade_tool@2.1.0",
+            "hpm_dest": "@hihope-upgrade_tool-2.1.0.tgz",
+            "sha256": "ca1580422297f8509a7d1799ec1bc7ca7e5518b588dcda3dc9396affd81121ce",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/61/v3/ZwnkL30vS7ediNgtwcvvXQ/AevGFfb3RruF0R9tGikx4Q.tgz",
+            "exe_name": "upgrade_tool.exe"
+        }
+    },
+    "xr806": {
+        "phoenixmc": {
+            "windows": "",
+            "version": "1.0.1",
+            "url": "",
+            "exe_name": "phoenixMC_cli.exe"
+        }
+    },
+    "xr807": {
+        "phoenixmc": {
+            "windows": "",
+            "version": "1.0.1",
+            "url": "",
+            "exe_name": "phoenixMC_cli.exe"
+        }
+    },
+    "bearpi_hm_micro": {
+        "STM32_Programmer_CLI": {
+            "windows": "",
+            "version": "1.0.0",
+            "url": "",
+            "exe_name": "STM32_Programmer_CLI.exe"
+        }
+    },
+    "hi3751v350": {
+        "tool_hiburn": {
+            "windows": "HiBurnCmdLine-5.5.2-win32-x86_64.zip",
+            "version": "5.5.2",
+            "hpm_name": "@huawei/hiburn@5.5.2",
+            "hpm_dest": "@huawei-hiburn-5.5.2.tgz",
+            "sha256": "a50861a9c79092735f23f22f599dbbecb64ae16716f729246b26f51b2e63d4a5",
+            "url": "https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/ad/v3/UIpm9QXKSbqp16iZPYBxiw/jQtvrzNzRdWnaEESSGC8YQ.tgz",
+            "exe_name": "hiburn.jar"
+        }
+    }
+
+}

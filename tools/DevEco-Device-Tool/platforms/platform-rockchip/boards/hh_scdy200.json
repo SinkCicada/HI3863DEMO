@@ -1,0 +1,63 @@
+{
+    "build": {
+        "cpu": "cortex-a55",
+        "f_cpu": "2000000000L",
+        "mcu": "rk3568",
+        "device_level": 2
+    },
+    "memory":{
+    },
+    "debug": {},
+    "upload":{
+        "maximum_ram_size": 4294967296,
+        "maximum_size": 68719476736,
+        "protocol": "upgrade",
+        "protocols": [
+            "upgrade"
+        ],
+        "partition_types": {},
+        "partitions_profile":{
+            "hb": {
+                "profile": "out/rk3568/packages/phone/images/parameter.txt",
+                "loader_bin": "MiniLoaderAll.bin"
+            },
+            "ohos-sources": {
+                "profile": "out/rk3568/packages/phone/images/parameter.txt",
+                "loader_bin": "MiniLoaderAll.bin"
+            },
+            "hpm": {
+                "profile": "out/rk3568/packages/phone/images/parameter.txt",
+                "loader_bin": "MiniLoaderAll.bin"
+            }
+        }
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "product": "rk3568@hihope",
+                "board": "rk3568"
+            }
+        },
+        "ohos-sources": {
+            "build": {
+                "product_name": "rk3568",
+                "target": "rk3568/packages/phone/images"
+            }
+        },
+        "hpm": {
+            "build": {
+                "target": "rk3568/packages/phone/images"
+            },
+            "bundles": [
+                "@ohos/standard_system"
+            ]
+        }
+    },
+    "name": "HH-SCDY200",
+    "platforms": [
+        "rockchip"
+    ],
+    "supported_os": ["linux"],
+    "url": "",
+    "vendor": "HiHope"
+}

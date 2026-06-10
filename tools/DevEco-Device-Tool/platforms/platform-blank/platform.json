@@ -1,0 +1,47 @@
+{
+    "name": "blank",
+    "title": "Blank",
+    "description": "Blank platform",
+    "url": "https://hpm.harmonyos.com/#/cn/home",
+    "homepage": "https://device.harmonyos.com/cn/ide",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "~3.0.0"
+    },
+    "version": "3.1.400",
+    "frameworks":{
+        "ohos-sources":{
+            "script":"builder/frameworks/ohos-sources.py"
+        },
+        "hb":{
+            "script":"builder/frameworks/hb.py"
+        },
+        "hpm":{
+            "script":"builder/frameworks/hpm.py"
+        }
+    },
+    "packageRepositories": [
+    ],
+    "packages": {
+        "ninja":{
+            "type": "tool",
+            "optional": true
+        },
+        "hc_gen":{
+            "type": "tool",
+            "optional": true
+        },
+        "gn":{
+            "type": "tool",
+            "optional": true
+        },
+        "arm_noneeabi_gcc":{
+            "type":"toolchain",
+            "optional":true
+        },
+        "gcc_riscv32":{
+            "type":"toolchain",
+            "optional":true
+        }
+    }
+}

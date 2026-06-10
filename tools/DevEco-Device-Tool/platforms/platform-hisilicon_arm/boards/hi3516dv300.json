@@ -1,0 +1,221 @@
+{
+    "build": {
+        "cpu": "cortex-a7",
+        "f_cpu": "900000000L",
+        "mcu": "Hi3516DV300",
+        "device_level": 1
+    },
+    "debug": {
+        "openocd_target": "hi3516ev200",
+        "reg_sysreset": "0x12020004",
+        "entry_point": "0x80000000",
+        "broken_jtag": true,
+        "default": "openocd",
+        "client": "lldb",
+        "clients": [
+            "lldb",
+            "gdb"
+        ]
+    },
+    "memory": {
+        "emmc": {
+            "size": "0x200000000"
+        }
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "target": "ipcamera_hi3516dv300"
+            }
+        },
+        "hb": {
+            "build": {
+                "board": "hispark_taurus"
+            },
+            "products": [
+                "ipcamera_hispark_taurus@hisilicon"
+            ],
+            "menuconfig": {
+                "path": "kernel/liteos_a",
+                "cmd": "make update_config"
+            },
+            "llvm_clang_path": "prebuilts/clang/ohos/linux-x86_64/llvm/bin",
+            "board_alias": [
+                "hispark_taurus"
+            ]
+        },
+        "hpm": {
+            "build": {
+                "target": "hispark_taurus/ipcamera_hispark_taurus"
+            },
+            "output_bin": {
+                "fastboot": " ",
+                "kernel": " ",
+                "rootfs": " ",
+                "userfs": " "
+            },
+            "llvm_clang_path": "ohos_bundles/@ohos/llvm/llvm/bin",
+            "bundles": [
+                "@ohos/hispark_taurus",
+                "@opensource/hoperun_hm_cenctrl_board",
+                "@opensource/hoperun_hm_camera",
+                "@opensource/hoperun_hm_door_3516",
+                "@opensource/hoperun_hm_electronic_board"
+            ],
+            "board_alias": [
+                "hi3516"
+            ]
+        }
+    },
+    "name": "Hi3516DV300",
+    "platforms": [
+        "hisilicon_arm",
+        "hisilicon_arm_linux"
+    ],
+    "upload": {
+        "framework_partition": {
+            "ohos-sources": {
+                "output_bin": {
+                    "fastboot": "vendor/hisi/hi35xx/hi3516dv300/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/ipcamera_hi3516dv300/OHOS_Image.bin",
+                    "rootfs": "out/ipcamera_hi3516dv300/rootfs.img",
+                    "userfs": "out/ipcamera_hi3516dv300/userfs.img"
+                },
+                "analysis_bin": {
+                    "elf": "out/wifiiot/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/wifiiot/rootfs"
+                }
+            },
+            "ipcamera_hispark_taurus@hisilicon": {
+                "output_bin": {
+                    "fastboot": "device/board/hisilicon/hispark_taurus/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/hispark_taurus/ipcamera_hispark_taurus/OHOS_Image.bin",
+                    "rootfs": "out/hispark_taurus/ipcamera_hispark_taurus/rootfs_vfat.img",
+                    "userfs": "out/hispark_taurus/ipcamera_hispark_taurus/userfs_vfat.img"
+                },
+                "output_bin_version": {
+                    "1.1": {
+                        "fastboot": "device/hisilicon/hispark_taurus/sdk_liteos/uboot/out/boot/u-boot-hi3516dv300.bin"
+                    },
+                    "3.0": {
+                        "fastboot": "device/hisilicon/hispark_taurus/sdk_liteos/uboot/out/boot/u-boot-hi3516dv300.bin"
+                    }
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_taurus/ipcamera_hispark_taurus/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/hispark_taurus/ipcamera_hispark_taurus/rootfs"
+                }
+            },
+            "@ohos/hispark_taurus": {
+                "output_bin": {
+                    "fastboot": "device/board/hisilicon/hispark_taurus/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/hispark_taurus/ipcamera_hispark_taurus/OHOS_Image.bin",
+                    "rootfs": "out/hispark_taurus/ipcamera_hispark_taurus/rootfs_vfat.img",
+                    "userfs": "out/hispark_taurus/ipcamera_hispark_taurus/userfs_vfat.img"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_taurus/ipcamera_hispark_taurus/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/hispark_taurus/ipcamera_hispark_taurus/rootfs"
+                }
+            },
+            "@opensource/hoperun_hm_cenctrl_board": {
+                "output_bin": {
+                    "fastboot": "device/hisilicon/hispark_taurus/sdk_liteos/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/hispark_taurus/smart_cenctrl_board/OHOS_Image.bin",
+                    "rootfs": "out/hispark_taurus/smart_cenctrl_board/rootfs_vfat.img",
+                    "userfs": "out/hispark_taurus/smart_cenctrl_board/userfs_vfat.img"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_taurus/smart_cenctrl_board/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/hispark_taurus/smart_cenctrl_board/rootfs"
+                }
+            },
+            "@opensource/hoperun_hm_camera": {
+                "output_bin": {
+                    "fastboot": "device/hisilicon/hispark_taurus/sdk_liteos/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/hispark_taurus/smart_camera/OHOS_Image.bin",
+                    "rootfs": "out/hispark_taurus/smart_camera/rootfs_vfat.img",
+                    "userfs": "out/hispark_taurus/smart_camera/userfs_vfat.img"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_taurus/smart_camera/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/hispark_taurus/smart_camera/rootfs"
+                }
+            },
+            "@opensource/hoperun_hm_door_3516": {
+                "output_bin": {
+                    "fastboot": "device/hisilicon/hispark_taurus/sdk_liteos/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/hispark_taurus/smart_door_viewer_3516/OHOS_Image.bin",
+                    "rootfs": "out/hispark_taurus/smart_door_viewer_3516/rootfs_vfat.img",
+                    "userfs": "out/hispark_taurus/smart_door_viewer_3516/userfs_vfat.img"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_taurus/smart_door_viewer_3516/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/hispark_taurus/smart_door_viewer_3516/rootfs"
+                }
+            },
+            "@opensource/hoperun_hm_electronic_board": {
+                "output_bin": {
+                    "fastboot": "device/hisilicon/hispark_taurus/sdk_liteos/uboot/out/boot/u-boot-hi3516dv300.bin",
+                    "kernel": "out/hispark_taurus/electronic_board/OHOS_Image.bin",
+                    "rootfs": "out/hispark_taurus/electronic_board/rootfs_vfat.img",
+                    "userfs": "out/hispark_taurus/electronic_board/userfs_vfat.img"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_taurus/electronic_board/OHOS_Image"
+                },
+                "rootfs_path": {
+                    "rootfs": "out/hispark_taurus/electronic_board/rootfs"
+                }
+            }
+        },
+        "partition_types": {
+            "fastboot": {
+                "addr": "0x000000",
+                "length": "0x100000",
+                "mem": "emmc"
+            },
+            "kernel": {
+                "addr": "0x100000",
+                "length": "0x900000",
+                "mem": "emmc"
+            },
+            "rootfs": {
+                "addr": "0xa00000",
+                "length": "0x1e00000",
+                "mem": "emmc"
+            },
+            "userfs": {
+                "addr": "0x2800000",
+                "length": "0x3200000",
+                "mem": "emmc"
+            }
+        },
+        "offset_address": "0x82000000",
+        "protocol": "hiburn-usb",
+        "protocols": [
+            "hiburn-usb",
+            "hiburn-serial",
+            "hiburn-net"
+        ],
+        "maximum_ram_size": 0,
+        "maximum_size": 16777216
+    },
+    "url": "http://www.hisilicon.com/en/Products/ProductList/Camera",
+    "supported_os": [
+        "linux"
+    ],
+    "vendor": "HiSilicon"
+}

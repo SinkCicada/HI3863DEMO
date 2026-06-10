@@ -1,0 +1,281 @@
+{
+    "ohos_toolchain": [
+        {
+            "version": "1.x",
+            "common-tools": {
+                "prebuilt": {
+                    "clang": {
+                        "searching_item": "clang",
+                        "version": "9.0",
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/clang/9.0.0-36191/linux/llvm-linux-9.0.0-36191.tar",
+                        "install_command": "tar xvf llvm-linux-9.0.0-36191.tar",
+                        "environment_path": "llvm/bin"
+                    },
+                    "gn": {
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/gn/latest/linux/gn-linux-x86-1717.tar.gz",
+                        "install_command": "mkdir -p gn && tar xvf gn-linux-x86-1717.tar.gz -C gn",
+                        "environment_path": "gn"
+                    },
+                    "ninja": {
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/ninja/1.10.1/linux/ninja-linux-x86-1.10.1.tar.gz",
+                        "install_command": "mkdir -p ninja && tar xvf ninja-linux-x86-1.10.1.tar.gz -C ninja",
+                        "environment_path": "ninja"
+                    },
+                    "hc-gen": {
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/hc-gen/0.65/linux/hc-gen-0.65-linux.tar",
+                        "install_command": "tar xvf hc-gen-0.65-linux.tar",
+                        "environment_path": "hc-gen"
+                    }
+                },
+                "pip": {
+                    "pycryptodome": {},
+                    "ecdsa": {},
+                    "prompt_toolkit": {
+                        "version": "==1.0.14"
+                    },
+                    "scons": {}
+                },
+                "deb": {
+                    "ccache": {},
+                    "dosfstools": {},
+                    "mtools": {},
+                    "zip": {},
+                    "unzip": {},
+                    "mtd-utils": {},
+                    "libncurses5": {}
+                },
+                "inner": {
+                    "java": {
+                        "path": "core/tool_openjdk_jre/bin"
+                    }
+                }
+            },
+            "specific-tools": {
+                "@hihope/neptune_iot": {
+                    "compiler": "csky-abiv2-elf-gcc",
+                    "prebuilt": {
+                        "gn": {
+                            "url": "https://repo.huaweicloud.com/harmonyos/compiler/gn/latest/linux/gn-linux-x86-1717.tar.gz",
+                            "install_command": "mkdir -p gn && tar xvf gn-linux-x86-1717.tar.gz -C gn",
+                            "environment_path": "gn"
+                        },
+                        "ninja": {
+                            "url": "https://repo.huaweicloud.com/harmonyos/compiler/ninja/1.10.1/linux/ninja-linux-x86-1.10.1.tar.gz",
+                            "install_command": "mkdir -p ninja && tar xvf ninja-linux-x86-1.10.1.tar.gz -C ninja",
+                            "environment_path": "ninja"
+                        }
+                    }
+                },
+                "@hihope/neptune_bluetoothkeyboard": {
+                    "compiler": "csky-abiv2-elf-gcc"
+                },
+                "@hihope/neptune_hid": {
+                    "compiler": "csky-abiv2-elf-gcc"
+                },
+                "@bearpi/bearpi_hm_nano_flower": {
+                    "pip": {
+                        "requests": {}
+                    }
+                }
+            }
+        },
+        {
+            "version": "2.x",
+            "common-tools": {
+                "prebuilt": {
+                    "clang": {
+                        "searching_item": "clang",
+                        "version": "10.0.1",
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/clang/10.0.1-62608/linux/llvm.tar.gz",
+                        "install_command": "tar -zxvf llvm.tar.gz",
+                        "environment_path": "llvm/bin"
+                    },
+                    "gn": {
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/gn/latest/linux/gn-linux-x86-1717.tar.gz",
+                        "install_command": "mkdir -p gn && tar xvf gn-linux-x86-1717.tar.gz -C gn",
+                        "environment_path": "gn"
+                    },
+                    "ninja": {
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/ninja/1.10.1/linux/ninja-linux-x86-1.10.1.tar.gz",
+                        "install_command": "mkdir -p ninja && tar xvf ninja-linux-x86-1.10.1.tar.gz -C ninja",
+                        "environment_path": "ninja"
+                    },
+                    "hc-gen": {
+                        "url": "https://repo.huaweicloud.com/harmonyos/compiler/hc-gen/0.65/linux/hc-gen-0.65-linux.tar",
+                        "install_command": "tar xvf hc-gen-0.65-linux.tar",
+                        "environment_path": "hc-gen"
+                    }
+                },
+                "pip": {
+                    "pycryptodome": {},
+                    "ecdsa": {},
+                    "prompt_toolkit": {
+                        "version": "==1.0.14"
+                    },
+                    "scons": {}
+                },
+                "deb": {
+                    "ccache": {},
+                    "dosfstools": {},
+                    "mtools": {},
+                    "zip": {},
+                    "unzip": {},
+                    "mtd-utils": {},
+                    "libncurses5": {}
+                },
+                "inner": {
+                    "java": {
+                        "path": "core/tool_openjdk_jre/bin"
+                    }
+                }
+            },
+            "specific-tools": {
+                "lite": {
+                    "pip": {
+                        "pycryptodome": {},
+                        "ecdsa": {}
+                    },
+                    "deb": {
+                        "dosfstools": {},
+                        "mtd-utils": {},
+                        "mtools": {}
+                    }
+                },
+                "standard": {
+                    "deb": {
+                        "curl": {},
+                        "git": {},
+                        "build-essential": {},
+                        "m4": {},
+                        "wget": {},
+                        "flex": {},
+                        "bison": {},
+                        "perl": {},
+                        "ruby": {},
+                        "bc": {},
+                        "genext2fs": {},
+                        "liblz4-tool": {}
+                    }
+                }
+            }
+        },
+        {
+            "version": "3.x",
+            "common-tools": {
+                "pip": {
+                    "kconfiglib": {
+                        "version": ">=14.1.0"
+                    },
+                    "prompt_toolkit": {
+                        "version": "==1.0.14"
+                    },
+                    "PyYAML": {},
+                    "requests": {},
+                    "scons": {}
+                },
+                "deb": {
+                    "ccache": {},
+                    "zip": {},
+                    "unzip": {},
+                    "libncurses5": {},
+                    "bc": {},
+                    "bison": {},
+                    "genext2fs": {},
+                    "libfl-dev":{},
+                    "openjdk-8-jdk-headless": {}
+                },
+                "inner": {
+                    "java": {
+                        "path": "core/tool_openjdk_jre/bin"
+                    }
+                }
+            },
+            "specific-tools": {
+                "@ohos/hispark_taurus_linux": {
+                    "deb": {
+                        "u-boot-tools": {},
+                        "gcc-arm-linux-gnueabi": {}
+                    }
+                },
+                "ipcamera_hispark_taurus_linux@hisilicon": {
+                    "deb": {
+                        "gcc-arm-linux-gnueabi": {},
+                        "u-boot-tools": {},
+                        "flex": {},
+                        "bison": {}
+                    }
+                },
+                "hispark_phoenix@hisilicon": {
+                    "deb": {
+                        "u-boot-tools": {}
+                    }
+                },
+                "bearpi_hm_micro@bearpi": {
+                    "deb": {
+                        "u-boot-tools": {}
+                    }
+                },
+                "wifiiot_hispark_pegasus@hisilicon": {
+                    "pip": {
+                        "dataclasses": {}
+                    }
+                },
+                "lite": {
+                    "pip": {
+                        "pycryptodome": {},
+                        "ecdsa": {}
+                    },
+                    "deb": {
+                        "dosfstools": {},
+                        "mtd-utils": {},
+                        "mtools": {}
+                    }
+                },
+                "standard": {
+                    "deb": {
+                        "curl": {},
+                        "git": {},
+                        "build-essential": {},
+                        "m4": {},
+                        "wget": {},
+                        "flex": {},
+                        "perl": {},
+                        "ruby": {},
+                        "bc": {},
+                        "liblz4-tool": {},
+                        "libssl-dev": {},
+                        "cpio": {}
+                    }
+                }
+            }
+        }
+    ],
+    "compilers": {
+        "prebuilt": {
+            "riscv32-unknown-elf-gcc": {
+                "version": "7.3.0",
+                "url": "https://repo.huaweicloud.com/harmonyos/compiler/gcc_riscv32/7.3.0/linux/gcc_riscv32-linux-7.3.0.tar.gz",
+                "install_command": "tar xvf gcc_riscv32-linux-7.3.0.tar.gz",
+                "environment_path": "gcc_riscv32/bin"
+            },
+            "arm-none-eabi-gcc": {
+                "version": "10.3",
+                "url": "https://repo.huaweicloud.com/harmonyos/compiler/gcc-arm-none-eabi/10.3/linux/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2",
+                "install_command": "tar xvf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2",
+                "environment_path": "gcc-arm-none-eabi-10.3-2021.10/bin/"
+            },
+            "csky-abiv2-elf-gcc": {
+                "version": "3.10.29",
+                "url": "https://repo.huaweicloud.com/harmonyos/compiler/gcc_csky/v3.10.29/linux/csky-v3.10.29.tar.gz",
+                "install_command": "tar xvf csky-v3.10.29.tar.gz",
+                "environment_path": "csky/bin"
+            },
+            "csky-elfabiv2-gcc": {
+                "version": "3.10.29",
+                "url": "https://repo.huaweicloud.com/harmonyos/compiler/gcc_csky/v3.10.29/linux/csky-v3.10.29.tar.gz",
+                "install_command": "tar xvf csky-v3.10.29.tar.gz",
+                "environment_path": "csky/bin"
+            }
+        }
+    }
+}

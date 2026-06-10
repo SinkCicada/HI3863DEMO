@@ -1,0 +1,6 @@
+{
+    "name":"tools",
+    "version":"1.0.0",
+    "description":"A template for integrating tools",
+    "publishAs":"template"
+}

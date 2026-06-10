@@ -1,0 +1,133 @@
+HUAWEI DevEco Device Tool User Agreement
+1.Definitions
+1.1."Huawei" means Huawei Device Co., Ltd., with its registered address at No. 2, Xincheng Road, Songshan Lake Park, Dongguan, Guangdong Province, the People's Republic of China.
+1.2."Huawei Software" means the integrated development environment (IDE) DevEco Device Tool provided by Huawei, as well as the Software Development Kit (SDK) and other software that you can obtain through DevEco Device Tool, including any software updates provided by Huawei.
+1.3."HUAWEI DevEco Device Tool" means the one-stop IDE provided for developers of HarmonyOS or OpenHarmony-powered smart devices. It allows on-demand customization of HarmonyOS and OpenHarmony components, as well as code editing, compiling, burning, debugging, etc.
+1.4."OpenHarmony" means the open source project incubated and operated by the OpenAtom Foundation.
+1.5."HarmonyOS" means the smart device operating system (OS) developed by Huawei based on the OpenHarmony project, which is an open source project, as mentioned above.
+1.6."HarmonyOS Ecosystem Device" means the smart device that (i) you develop based on this Agreement and (ii) meets Huawei's requirements for compatibility, stability, security, and distributed user experience.
+1.7."OpenHarmony Compatible Device" means the smart device that (i) conforms to the Product Compatibility Specification (PCS) for OpenHarmony and (ii) passes the compatibility test conducted by the OpenAtom Foundation.
+
+2.About This Agreement
+2.1.The HUAWEI DevEco Device Tool User Agreement (hereinafter referred to as "this Agreement") is a legally binding agreement entered into and concluded by and between you and Huawei. This Agreement contains the terms and conditions based on which Huawei provides you with the IDE, HUAWEI DevEco Device Tool, and related functions (hereinafter referred to as "this Service"). This Agreement tells you how Huawei will provide this Service to you, what activities are permitted or not permitted by this Service, what to do if you encounter any issues when using this Service, and other important information. Please read this Agreement carefully, especially any clauses about exclusion or limitation of liability, governing laws, dispute resolution, and other important terms written in bold to draw your attention.
+2.2.Once you agree to this Agreement or use this Service as prompted on the screen, it is deemed that you have entered into a binding legal contract with Huawei, and Huawei will perform its applicable contractual obligations in accordance with this Agreement. If you do not agree to this Agreement, you must not access or use this Service.
+2.3.If you have any questions regarding this Agreement, please contact us using the contact information provided in the "Contacting Us" section.
+
+3.Requirements on Using This Service
+3.1.You shall have reached the legal age of entering into a binding contract with Huawei, have the ability to enter into such an agreement with Huawei and bear legal liabilities for any breach, and you are not prohibited from receiving services from Huawei by applicable laws. If you sign this Agreement on behalf of an entity, you undertake that you have the qualifications and ability to sign this Agreement on behalf of said entity and that said entity has the qualifications or licenses required to enter into this Agreement with Huawei.
+
+4.This Service
+For details about this Service, see the official document.
+
+5.License
+5.1.Huawei grants you a global, limited, non-exclusive, free, non-transferable, non-sublicensable, and revocable license to use this Service in accordance with the terms of this Agreement and the Huawei user guide published on the HarmonyOS website. You may download, install, copy, integrate, and run Huawei Software only for the purpose of developing HarmonyOS Ecosystem Devices and/or OpenHarmony Compatible Devices.
+5.2.Any and all rights and benefits related to Huawei Software shall belong to Huawei, including any intellectual property rights therein. Huawei reserves any and all rights that are not explicitly granted to you.
+5.3.No terms herein may be construed as having granted you the right to use any trademarks, logos, domain names, company names, or product names of Huawei, or other brands.
+5.4.Huawei agrees not to obtain from you (or your licensors) any rights or benefits of any devices developed by you using Huawei Software in accordance with this Agreement, including any intellectual property rights therein.
+5.5.If you integrate third-party software into HUAWEI DevEco Device Tool and use such software on HUAWEI DevEco Device Tool, you must comply with the applicable third-party software license agreement(s).
+5.6.Huawei Software may contain some open source software components. In the event that the licenses applicable to such software components conflict with this Agreement, said licenses shall prevail.
+
+6.Terms of Use
+6.1.By accessing and using this Service, you undertake and agree to do so in a legal and ethical manner and in accordance with this Agreement.
+6.2.In connection with your use of this Service, you undertake:
+(1)Not to upload, download, store, duplicate, publish, transmit, send by email, or otherwise provide any such content prohibited by applicable laws, regulations, or policies that:
+(a)Violates the fundamental principles of the Constitution;
+(b)Compromises national security, divulges state secrets, subverts state power, or undermines national unity;
+(c)Harms national honor and interests;
+(d)Incites ethnic hatred or discrimination or disrupts ethnic solidarity;
+(e)Disrupts the religious policies of the country or promotes evil cults or feudal or superstitious beliefs;
+(f)Spreads rumors, disrupts social order, or undermines social stability;
+(g)Spreads or describes content that involves obscenity, pornography, gambling, violence, murder, terror, or abets crimes;
+(h)Insults, defames, or infringes on the legal rights and interests of others;
+(i)Endangers social morality or the excellence of national cultural traditions;
+(j)Infringes upon any third party's patent rights, copyrights, trademark rights, reputation rights, or any other legitimate rights and interests; or
+(k)Is otherwise prohibited by laws or administrative regulations;
+(2)Not to infringe upon others' privacy, business secrets, trademark right, copyright, patent right, or other lawful rights;
+(3)Not to engage in any illegal transactions, such as selling firearms, drugs, illegal substances, or other prohibited items;
+(4)Not to plan to engage in or engage in money laundering, credit card kiting, or other illegal financial transactions;
+(5)Not to remove any copyright, trademark, or other proprietary notices from any portion of this Service;
+(6)Not to reproduce, make alterations to, or modifications of, all or any part of this Service, or permit this Service or any part thereof to be combined with, or be incorporated in, any other programs;
+(7)Not to gain or attempt to gain unauthorized access to or impair any aspect of this Service or relevant systems or networks;
+(8)Not to disassemble, decompile, reverse-engineer, or create derivative works based on the whole or any part of this Service, or attempt to do so beyond the extent allowed by applicable laws;
+(9)Not to distribute, license, lease, sell, resell, transfer, publicly display, publicly perform, transmit, stream, broadcast, or otherwise exploit this Service;
+(10)Not to provide or otherwise make available this Service in whole or in part (including the subject matter hereof and source code) in any form to any person without Huawei's prior written consent;
+(11)Not to impersonate any individual, falsely state, or otherwise misrepresent your affiliation with any individual or entity;
+(12)Not to use this Service (or any part(s) thereof) in any unlawful manner, for any unlawful purpose, or in any manner violating this Agreement, or act fraudulently or maliciously, including but not limited to hacking into or inserting malicious code, including viruses and harmful data, into this Service (or into the websites linked to this Service) or any OS;
+(13)Not to infringe upon Huawei's intellectual property rights or those of any third party in relation to your access to and/or use of this Service;
+(14)Not to collect users' information, otherwise access this Service or Huawei's systems using automated means, or attempt to decipher any transmissions to or from the servers running this Service;
+(15)Not to develop, support, or use software, devices, scripts, or any other means or processes (including crawlers, browser plug-ins and add-ons, or any other technology or manual work) to scrape information from this Service or otherwise copy profiles and other data from this Service;
+(16)Not to commercially exploit this Service without Huawei's prior written consent;
+(17)Not to use this Service to engage in any illegal transactions, such as selling firearms, drugs, illegal substances, pirated software, or other prohibited items;
+(18)Not to provide gambling information or use any means to solicit others to gamble;
+(19)Not to solicit sign-in information or access an account of someone else;
+(20)Not to engage in money laundering, illegal cash advances, or pyramid selling schemes;
+(21)Not to attempt, facilitate, or encourage any violations of this Agreement (or any part(s) thereof);
+(22)Not to use this Service in any manner which may damage, disable, impair, endanger, or overload this Service, Huawei systems, or the security thereof, or interfere with other users or any other party's computer systems, or hack or gain unauthorized access to this Service, Huawei Content (defined below), or data; and
+(23)Not to otherwise violate applicable laws, regulations, or policies or this Agreement.
+
+7.Privacy and Personal Information Protection
+7.1.We attach great importance to the protection of your personal information and privacy. You understand and agree that during your use of this Service, we will process your personal information in accordance with the Statement About HUAWEI DevEco Device Tool and Privacy (the "Privacy Statement") as necessary for the purposes of providing this Service or based on your consent. Therefore, you need to carefully read the separately presented Privacy Statement to understand the purposes and methods of our personal information processing, types and retention periods of the personal information we process, methods and procedures for you to exercise your user rights, measures taken by Huawei to protect your personal information, etc.
+7.2.If the device(s) that you develop using this Service will collect and process user data, you shall inform users of the types of data to be collected by said device(s), purposes of such data collection, and the data processing methods, among others, obtain users' consent, and provide users with privacy statements and protection measures that comply with applicable laws. You shall be fully responsible for resolving any and all privacy security and protection issues between you and end users arising from said device(s).
+
+8.Disclaimers
+8.1.This Service is for your sole use only and must not be used by any third party. You agree that Huawei and its affiliates, officers, directors, employees, contractors, agents, third-party payment service providers, partners, licensors, and distributors (hereinafter collectively, "Huawei Parties") are not liable for any losses caused by any unauthorized use of this Service.
+8.2.Your use of this Service may be interrupted, delayed, or disrupted for an unknown period of time for reasons that are beyond our control. You agree that the Huawei Parties are not liable for any claim arising from or related to such interruptions, delays, disruptions, or similar failures.
+8.3.To the maximum extent permitted by applicable laws, the Huawei Parties are not liable to you or to anyone else for any damages if you or anyone else are unable to access or use this Service due to:
+(a)Any suspension or termination of this Service by Huawei to enable maintenance work or updates to systems, software, or hardware to be carried out;
+(b)Any communication delay or failure of a system or network that is owned or controlled by someone other than Huawei;
+(c)Any suspension, cancellation, or termination of any contract or other arrangements between Huawei and any of its third-party payment service providers; or
+(d)Any errors or interruption due to hacking attacks or similar security breaches.
+8.4.This Service is provided on an "as-is" and "as-available" basis without any representation or endorsement of any kind. To the maximum extent permitted by applicable laws, the Huawei Parties disclaim all warranties, conditions, or other terms of any kind, express or implied, and make no guarantee, undertaking, representation, or warranty for the following:
+(a)The completeness, accuracy, reliability, or timeliness of any of the content made available on or through this Service;
+(b)This Service or the server(s) it is hosted on is free from defects, errors, viruses, bugs, or other harmful elements;
+(c)Any defects in the operation or functionality of this Service will be corrected;
+(d)The specific functions of this Service, the reliability, quality, or accuracy of any information obtained by you as a result of your use of or access to this Service can be guaranteed;
+(e)The security or error-free nature of this Service; and
+(f)This Service's reliability, quality, accuracy, availability, or ability to meet your needs, provide certain outputs, or achieve certain results or outcomes. The Huawei Parties are not liable for any losses or damages to you caused in whole or in part by you relying upon, using, or interpreting this Service, or other information obtained through your (or any other person's) access to and/or use of this Service.
+8.5.The laws of some countries do not allow certain warranties, guarantees, or liabilities to be excluded or limited by a contract. If these laws apply to you, some or all of the above exclusions or limitations may not apply. Nothing in this Agreement shall compromise the rights that you are legally entitled to as a consumer.
+
+9.Indemnification for Breach of Agreement
+9.1.To the maximum extent permitted by applicable laws in your jurisdiction, you shall hold harmless and indemnify the Huawei Parties from and against any and all claims, suits, or actions arising from or related to:
+(a)Your content;
+(b)Your use of this Service;
+(c)Your violation or breach of this Agreement or any part of applicable End User License Agreement (EULA);
+(d)Your infringement upon any third-party intellectual property or any other rights; and
+(e)Similar actions or violations by any person using your HUAWEI ID.
+9.2.In the event of any liabilities, damages, expenses, litigation fees, and attorney's fees incurred by disputes, complaints, and lawsuits arising from the aforementioned situations, you undertake and agree to promptly assist and cooperate as fully as reasonably required by any of the Huawei Parties.
+
+10.Termination of This Agreement
+10.1.This Agreement shall remain in effect unless you or Huawei terminates this Agreement in accordance with the provisions of Clause 10 herein.
+10.2.You may terminate this Agreement by stopping using all services provided by HUAWEI DevEco Device Tool.
+10.3.Subject to applicable laws, we may suspend, restrict, cancel, or terminate your access to part(s) or all of this Service at any time, without assuming liability to any individual or third party. We will endeavor to provide notice to you before we do this. However, we may immediately suspend, restrict, cancel, or terminate your access to part(s) or all of this Service without prior notice under any of the following circumstances:
+(a)If you violate, or Huawei believes that you are about to violate this Agreement, including any agreements, policies, or guidelines incorporated herein;
+(b)If you, or anyone acting on your behalf, acts illegally, or provides us with any false or misleading information;
+(c)In response to requests by law enforcement or other government agencies under valid legal processes; or
+(d)In case of urgent maintenance work or urgent updates to systems or hardware; or due to unexpected technical, safety, security, or business reasons.
+10.4.The expiration or termination of this Agreement does not affect the provisions of this Agreement that are expressed to operate or have effect after the expiration or termination thereof, and is without prejudice to any accrued rights or obligations or any rights or obligations which are intended to survive such expiration or termination.
+10.5.Any provisions of this Agreement which expressly or by their nature are intended to survive the termination of this Agreement shall remain in full force and effect subsequent to and notwithstanding such termination, until such provisions are satisfied or expire due to their natures.
+
+11.Amendments to This Agreement
+11.1.Huawei is constantly updating and improving this Service. Huawei may add or remove functions, create new limits to this Service, or temporarily or permanently suspend or stop any certain service without prior notice to you. Huawei may also modify this Agreement at any time based on updates to this Service.
+11.2.The updated Agreement, once released, will replace the original Agreement. We will display an agreement update notice on the app in a timely manner. If you do not accept the updated Agreement, please stop using this Service immediately. Your continued access to or use of this Service shall be deemed as your acceptance of the updated Agreement.
+11.3.If a change to this Service or this Agreement greatly affects or restricts users' access or use of this Service, Huawei will release an announcement about the new version of this Service within a reasonable period of time after said change. For changes to this Service that Huawei needs to make to meet security, safety, legal, or regulatory requirements, Huawei may not be able to meet the aforementioned timescales and will update you on these changes as soon as practicable.
+
+12.Governing Laws and Dispute Resolution
+12.1.This Agreement shall be governed by and construed in accordance with the laws of the People's Republic of China, without regard to the conflict-of-laws principles.
+12.2.Any and all disputes arising out of or in connection with this Agreement shall be resolved through amicable negotiations between you and Huawei. If such negotiation fails to resolve a dispute within thirty (30) days of the dispute occurrence, you and Huawei agree to submit said dispute to the People's Court of the Longgang District, Shenzhen, for resolution through litigation.
+
+13.General Terms
+13.1This Agreement constitutes the entire legal agreement between you and Huawei, and your use of this Service shall be subject to this Agreement. This Agreement shall completely supersede any and all prior agreements between you and Huawei with respect to this Service.
+13.2This Service may provide links to other websites or resources. You acknowledge and agree that Huawei is not responsible for the availability of such external websites or resources, and does not endorse and is not responsible or liable for any content, advertising, products, or other materials on or available from such websites or resources. Huawei is not responsible or liable for any damages or losses caused or alleged to be caused by or in connection with your use of or reliance on any such content, goods, or services available on or through any such websites or resources.
+13.3Nothing in this Agreement shall be construed to have created a partnership or agency relationship between you and Huawei. Neither Party shall have the right or authority to incur any liability, debt, or cost, or enter into any contracts or other arrangements in the name of or on behalf of the other.
+13.4Huawei is not liable for any failure or delay in the performance of its obligations under this Agreement or any provision of this Service that is caused by or attributed to matters beyond Huawei's reasonable control.
+13.5If any provision of this Agreement is found by a court with competent jurisdiction or any other competent authorities to be void, invalid, or unenforceable, it shall be deemed to be deleted from this Agreement and all other provisions of this Agreement shall remain in full force and legally effective.
+13.6Huawei not exercising a right or relief stipulated herein shall not be deemed as Huawei's waiver of such a right or relief, and shall not compromise Huawei's right to exercise such a right or relief in the future.
+13.7The headings of this Agreement are for the purpose of convenience only and shall have no legal effect.
+13.8Huawei has the right to assign and subcontract any of its rights and obligations under this Agreement.
+13.9You shall not subcontract any of your obligations under this Agreement nor assign or sublicense any of your rights under this Agreement.
+
+14.Contacting Us
+If you have any questions regarding this Agreement, please contact us by sending an email to the following email address: harmonysupport@huawei.com.
+
+Last updated: March 30, 2022
+

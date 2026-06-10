@@ -1,0 +1,51 @@
+{
+    "build": {
+        "cpu": "cortex-m4",
+        "f_cpu": "96000000L",
+        "mcu": "apollo4 blue",
+        "device_level": 0
+    },
+    "memory":{
+    },
+    "debug": {
+        "openocd_target": "apollo4ble",
+        "jlink_target":"AMA4B2KK-KBR",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": ["gdb"]
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "product": "secboot@ambiq",
+                "board": "apollo4ble"
+            },
+            "output_bin":{
+                "secboot": "out/apollo4ble/secboot/secboot.bin",
+                "recovery": "out/apollo4ble/recovery/recovery.bin"
+            }
+        }
+    },
+    "name": "Apollo4 Blue",
+    "platforms": [
+        "ambiq"
+    ],
+    "upload": {
+        "partition_types": {
+            "bin": {}
+        },
+        "speed": 4000,
+        "protocol": "jlink",
+        "protocols": [
+            "jlink"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": ["windows", "linux"],
+    "url": "https://www.hisilicon.com/en/products/smart-iot/ShortRangeWirelessIOT",
+    "vendor": "Ambiq"
+}

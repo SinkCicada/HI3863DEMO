@@ -1,0 +1,103 @@
+{
+    "remote_host": {
+        "github_ip": "140.82.118.3",
+        "gitlab_ip": "35.231.145.151",
+        "platformio_ip": "88.198.170.159",
+        "github_com": "github.com",
+        "platformio_org": "platformio.org"
+    },
+    "device_harmonyos_faq": "https://device.harmonyos.com/cn/docs/documentation/guide/faq-download-code-timeout-0000001308962204",
+    "devecostudio_host_url": "https://cn.devecostudio.huawei.com",
+    "devecostudio_drcn_url": "https://devecostudio-drcn.op.hicloud.com/kit/getIdePlugVersion?plugName=0H0S_Embedded_Studio",
+    "bit_ly_package_manager_ioerror_url": "http://bit.ly/package-manager-ioerror",
+    "bit_ly_configure_pio_ldf_url": "http://bit.ly/configure-pio-ldf",
+    "github_url": "https://github.com/",
+    "developer_mbed_url": "https://developer.mbed.org",
+    "os_mbed_url": "https://os.mbed.com",
+    "grs_hicloud_url": "https://grs.hicloud.com/grs/1.0",
+    "githubusercontent_url": "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py",
+    "apache_licenses_url": "http://www.apache.org/licenses/LICENSE-2.0",
+    "apache_contact_mail": "contact@platformio.org",
+    "hallard_me_url": "https://hallard.me/enable-serial-port-on-raspberry-pi/",
+    "pjrc_serial_installer_url": "http://www.pjrc.com/teensy/serial_install.exe",
+    "platformio_board_url": "https://platformio.org/boards",
+
+    "platformio_url": "https://platformio.org",
+    "platformio_docs_url": "https://docs.platformio.org",
+
+    "semver_url": "https://semver.org/",
+    "spdx_licenses_url": "https://spdx.org/licenses/",
+    "githubusercontent_licenses_url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.8/json/licenses.json",
+
+    "dl_platform_url": "https://dl.bintray.com/platformio/dl-platforms/manifest.json",
+    "platformio_lib_url": "https://platformio.org/lib/search?query=header:",
+    "dl_platformio_s_url": "https://dl.platformio.org/platforms/manifest.json",
+    "dl_platformio_url": "http://dl.platformio.org/platforms/manifest.json",
+
+    "dl_package_url": "https://dl.bintray.com/platformio/dl-packages/manifest.json",
+    "dl_platformio_packages_s_url": "https://dl.platformio.org/packages/manifest.json",
+    "dl_platformio_packages_url": "http://dl.platformio.org/packages/manifest.json",
+
+    "gitee_subsys_build_mini_lite_url": "https://gitee.com/openharmony/docs/blob/master/zh-cn/device-dev/subsystems/subsys-build-product.md",
+    "gitee_openharmony_master_https_url": "https://gitee.com/openharmony/manifest.git",
+    "gitee_openharmony_master_ssh_url": "git@gitee.com:openharmony/manifest.git",
+    "repo_getsdk_url": "https://repo.harmonyos.com/sdkmanager/south/v1/getSdk",
+
+    "github_platformio_url": "https://github.com/platformio/platformio-core/archive/develop.zip",
+    "githubusercontent_init_url": "https://raw.githubusercontent.com/platformio/platformio/develop/platformio/__init__.py",
+    "pypi_platform_url": "https://pypi.org/pypi/platformio/json",
+
+    "GRS_config": {
+        "devecostudio": {
+            "services": {
+                "com.huawei.devecostudio.kitmanager": {
+                    "ROOT": "https://developer-drcn.op.hicloud.com"
+                },
+                "com.huawei.devecostudio.global": {
+                    "alliance": "https://developer.huawei.com",
+                    "auth": "https://oauth-login.cloud.huawei.com",
+                    "cdndevecoide": "https://cdn.ide.deveco.huawei.com",
+                    "hilinkapi": "https://hilinkapi.rnd.huawei.com",
+                    "develop": "https://developer.harmonyos.com",
+                    "itgateway": "https://apigw.huawei.com",
+                    "huawei": "https://www.huawei.com",
+                    "privacyprotocol": "https://privacy.consumer.huawei.com",
+                    "huaweicloud": "https://www.huaweicloud.com",
+                    "mirrorcloud": "https://mirrors.huaweicloud.com",
+                    "spaceglobal": "https://devecostudio.huawei.com",
+                    "club": "https://club.huawei.com",
+                    "consumer": "https://consumer.huawei.com",
+                    "devecoide": "https://ide.deveco.huawei.com",
+                    "tokeninfo": "https://oauth-api.cloud.huawei.com"
+                },
+                "com.huawei.update": {
+                    "ROOT": "https://store.hispace.hicloud.com/hwmarket/api/"
+                }
+            },
+            "errorList": {
+                "com.huawei.devecostudio.region": "NOT_FIND_SERVING_COUNTRY_GROUP",
+                "com.huawei.cloud.hota": "NOT_FIND_SERVING_COUNTRY_GROUP",
+                "com.huawei.devecostudio.tracelog": "NOT_FOUND_SERVING_COUNTRY_GROUP"
+            }
+        }
+    },
+    "home_url_config": {
+        "doc_url": "https://device.harmonyos.com/cn/docs/documentation/guide/service_introduction-0000001050166905",
+        "feed_back_url": "https://developer.huawei.com/consumer/cn/forum/block/device",
+        "faq_url": "https://developer.huawei.com/consumer/cn/forum/topic/0203380024404140371?fid=0103702273237520029",
+        "office_website_url": "https://device.harmonyos.com/",
+        "repo_install_reference_url": "https://gitee.com/openharmony/docs/blob/master/zh-cn/device-dev/get-code/sourcecode-acquire.md#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6",
+        "git_install_reference_url": "https://git-scm.com/book/en/v2/Getting-Started-Installing-Git",
+        "git_lfs_install_reference_url": "https://gitee.com/vcs-all-in-one/git-lfs#installing",
+        "ide_update_url": "https://device.harmonyos.com/cn/ide"
+    },
+    "gn_win_zip": "https://repo.huaweicloud.com/harmonyos/compiler/gn/1744/windows/gn-windows-amd64.zip",
+    "ninja_win_zip": "https://repo.huaweicloud.com/harmonyos/compiler/ninja/1.9.0/windows/ninja-win.zip",
+    "cc_riscv32_win_env_tar_gz":"https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/66/v3/-JN3XER7QSW0D6b_VOp1sA/yBIY4phoQuKwM4MP9qDuKw.tgz",
+    "cc_riscv32_musl_win_tar_gz":"https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/f3/v3/FCWqlBP3QeevrE2swie1Kw/H1pwqJ44Tby93fJ5dTmXVA.tgz",
+    "cc_riscv32_musl_fp_win_tar_gz":"https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/5b/v3/MT-CfslVSSaf2G1nv2gmsA/AT9LNDq9RpKOay0z-2ciBw.tgz",
+    "hssclient_tar_gz":"https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/fc/v3/g3WFFsoFTJKtBC2kOiBjoQ/JyDJLJr6RvGAFKR5KIQnJA.tgz",
+    "hw_openocd_tar_gz":"https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/4d/v3/Prvq5kG7TqKjywJiSm1dsw/gWh1GpzxS_G8bNTNA7GiSw.tgz",
+    "tool_burncli_tar_gz":"https://contentcenter-drcn.dbankcdn.com/pub_1/DevEcoSpace_1_900_9/da/v3/bbDPqxaPTXC4o21bv_rnGQ/OaQFTrcTS1uFqO9-99q3kg.tgz"
+    
+}

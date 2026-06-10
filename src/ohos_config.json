@@ -1,0 +1,8 @@
+{
+  "root_path": "D:\\Users\\asus\\Desktop\\hi3863demo\\src",
+  "product": "wifiiot_hispark_pegasus",
+  "product_path": "D:\\Users\\asus\\Desktop\\hi3863demo\\src\\vendor\\hisilicon\\hispark_pegasus",
+  "board": "hispark_pegasus",
+  "kernel": "liteos_m",
+  "device_path": "D:\\Users\\asus\\Desktop\\hi3863demo\\src\\device\\hisilicon\\hispark_pegasus\\sdk_liteos"
+}

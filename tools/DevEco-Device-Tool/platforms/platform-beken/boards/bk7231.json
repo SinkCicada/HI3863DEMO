@@ -1,0 +1,38 @@
+{
+    "build": {
+        "cpu": "arm9",
+        "f_cpu": "120000000L",
+        "mcu": "bk7231",
+        "device_level": 0
+    },
+    "memory": {},
+    "debug": {},
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "bk7231"
+            },
+            "products": [
+                "wifi_iot@beken"
+            ]
+        }
+    },
+    "name": "bk7231",
+    "platforms": [
+        "beken"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "upload": {
+        "framework_partition": {
+            "wifi_iot@beken": {
+                "output_bin": {
+                    "app": "out/bk7231/wifi_iot/bk7231_sdk_crc.bin"
+                }
+            }
+        }
+    },
+    "url": "",
+    "vendor": "Beken"
+}

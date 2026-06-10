@@ -1,0 +1,43 @@
+{
+    "name": "vendorhm",
+    "title": "VendorHM",
+    "description": "VendorHM embedded platform",
+    "url": "https://hpm.harmonyos.com/#/cn/home",
+    "homepage": "https://device.harmonyos.com/cn/ide",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "~3.0.0"
+    },
+    "version": "3.1.400",
+    "frameworks":{
+        "hpm":{
+            "script":"builder/frameworks/hpm.py"
+        }
+    },
+    "packageRepositories": [
+    ],
+    "packages": {
+        "arm_noneeabi_gcc":{
+            "type":"toolchain",
+            "optional":true
+        },
+        "tool_openjdk_jre": {
+            "type": "toolchain",
+            "optional": true,
+            "version": "1.8.0-322"
+        },
+        "tool_burncli": {
+            "type": "uploader",
+            "optional": true,
+            "version": "5.6.9"
+        },
+        "gcc_riscv32": {
+            "type": "toolchain",
+            "optional": true
+        },
+        "hw_openocd": {
+            "type": "uploader",
+            "optional": true
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>DevEco Device Tool</title><script defer="defer" src="bundle.js"></script><link href="themes/light.css" rel="stylesheet"></head><script>const theme = getQueryString('theme') || 'dark';
+
+    function getQueryString(name) {
+      let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+      let r = decodeURIComponent(window.location.search.substr(1)).match(reg);
+      if (r != null) {
+        return r[2];
+      }
+      return null;
+    }</script><script>document.getElementsByTagName('link')[0].href = `themes/${theme}.css`;</script><body><div id="app" class=""></div></body><script>document.getElementById('app').className = `${theme}`;</script><script>window.lang = getQueryString('language');</script></html>

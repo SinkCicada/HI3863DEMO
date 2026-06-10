@@ -1,0 +1,59 @@
+{
+    "build": {
+        "cpu": "cortex-a53",
+        "f_cpu": "1500000000L",
+        "mcu": "t507",
+        "device_level": 2
+    },
+    "memory":{
+    },
+    "debug": {},
+    "upload":{
+        "maximum_ram_size": 4294967296,
+        "maximum_size": 68719476736,
+        "partition_types": {
+            "system": {}
+        },
+        "suite_tool": false,
+        "protocol": "awflash",
+        "protocols": [
+            "awflash"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "patch_kernel": {
+                "path": "device/soc/allwinner/build",
+                "cmd": [
+                    "python3 patch.py T507"
+                ]
+            },
+            "pack_image": {
+                "path": "device/soc/allwinner/build",
+                "cmd": [
+                    "./pack.sh"
+                ]
+            },
+            "build": {
+                "product_name": "T507",
+                "target": "ohos-arm-release/packages/phone/images",
+                "gn_args": "linux_kernel_version=\"linux-4.19\""
+            },
+            "output_bin":{
+                "system": "out/t507_linux_bearpi_uart0.img"
+            }
+        }
+    },
+    "name": "T507",
+    "platforms": [
+        "allwinner"
+    ],
+    "supported_os": ["linux"],
+    "url": "",
+    "vendor": "allwinner"
+}

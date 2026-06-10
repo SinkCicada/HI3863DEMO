@@ -1,0 +1,127 @@
+{
+    "hide_partition_tabs": true,
+    "hide_common_tab": true,
+    "simple_tab": true,
+    "options": [
+        {
+            "name": "series_name",
+            "default": "3065H"
+        },
+        {
+            "name": "board_build.mcu",
+            "default": "3065HRPICZ"
+        },
+        {
+            "name": "build_type",
+            "default": "debug"
+        },
+        {
+            "name": "custom_build_command",
+            "default": "python build/build_check.py ${BUILD_VENDOR} && python build/build.py build && python build/packet_create.py"
+        },
+        {
+            "name": "custom_clean_command",
+            "default": "python build/build.py clean"
+        },
+        {
+            "name": "upload_port",
+            "default": "COM1"
+        },
+        {
+            "name": "upload_speed",
+            "default": "115200"
+        },
+        {
+            "name": "upload_protocol",
+            "default": "burn-serial"
+        },
+        {
+            "name": "upload_bin_file",
+            "default": "out/bin/allinone.bin"
+        },
+        {
+            "name": "debug_client",
+            "default": "gdb"
+        },
+        {
+            "name": "debug_tool",
+            "default": "openocd(HiSpark-Trace)"
+        },
+        {
+            "name": "debug_interface",
+            "default": "swd"
+        },
+        {
+            "name": "debug_elf",
+            "default": "out/bin/target.elf"
+        },
+        {
+            "name": "debug_speed",
+            "default": "10000"
+        },
+        {
+            "name": "debug_live_watch_enable",
+            "default": "yes"
+        },
+        {
+            "name": "debug_hssclient_path",
+            "default": ""
+        },
+        {
+            "name": "chip_package_path",
+            "default": ""
+        },
+        {
+            "name": "compiler",
+            "default": "cc_riscv32_musl_fp_win"
+        },
+        {
+            "name": "optimization",
+            "default": "Os"
+        },
+        {
+            "name": "warnning",
+            "default": "no"
+        },
+        {
+            "name": "werror",
+            "default": "no"
+        },
+        {
+            "name": "wno_unused_function",
+            "default": "no"
+        },
+        {
+            "name": "wno_unused_label",
+            "default": "no"
+        },
+        {
+            "name": "wno_unused_parameter",
+            "default": "no"
+        },
+        {
+            "name": "wno_unused_variable",
+            "default": "no"
+        },
+        {
+            "name": "fstack_protector_strong",
+            "default": "no"
+        },
+        {
+            "name": "static_library_enable",
+            "default": "no"
+        },
+        {
+            "name": "static_library_name",
+            "default": ""
+        },
+        {
+            "name": "static_library_source_file",
+            "default": ""
+        },
+        {
+            "name": "static_library_dependency_header_file",
+            "default": ""
+        }
+    ]
+}

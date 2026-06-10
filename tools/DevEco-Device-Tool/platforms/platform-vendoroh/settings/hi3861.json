@@ -1,0 +1,76 @@
+{
+    "options": [
+        {
+            "name": "board_frameworks.hb.build.product",
+            "default": "wifiiot_hispark_pegasus@hisilicon"
+        },
+        {
+            "name": "compiler_bin_path",
+            "default": ""
+        },
+        {
+            "name": "upload_protocol",
+            "default": "hiburn"
+        },
+        {
+            "name": "upload_reset",
+            "default": "False"
+        },
+        {
+            "name": "upload_speed",
+            "default": "921600"
+        },
+        {
+            "name": "build_type",
+            "default": "debug"
+        },
+        {
+            "name": "debug_client",
+            "default": "gdb"
+        },
+        {
+            "name": "debug_tool",
+            "default": "jlink"
+        },
+        {
+            "name": "debug_interface",
+            "default": "swd"
+        },
+        {
+            "name": "debug_elf",
+            "default": ""
+        },
+        {
+            "name": "debug_device",
+            "default": ""
+        },
+        {
+            "name": "monitor_port",
+            "default": ""
+        },
+        {
+            "name": "monitor_speed",
+            "default": "115200"
+        },
+        {
+            "name": "analysis_elf_path",
+            "default": "./src/out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out"
+        },
+        {
+            "name": "analysis_map_path",
+            "default": "./src/out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+        },
+        {
+            "name": "analysis_compiler_path",
+            "default": ""
+        },
+        {
+            "name": "analysis_mode",
+            "default": "0"
+        },
+        {
+            "name": "analysis_rec_stats",
+            "default": "1"
+        }
+    ]
+}

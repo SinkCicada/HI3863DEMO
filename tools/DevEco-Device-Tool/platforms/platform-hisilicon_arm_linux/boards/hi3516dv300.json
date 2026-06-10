@@ -1,0 +1,84 @@
+{
+    "build": {
+        "cpu": "cortex-a7",
+        "f_cpu": "900000000L",
+        "mcu": "Hi3516DV300",
+        "device_level": 1
+    },
+    "debug": {},
+    "memory":{
+        "emmc":{
+           "size": "0x200000000"
+        }
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "product_name": "Hi3516DV300",
+                "target": "hi3516dv300/packages/phone/images"
+            }
+        },
+        "hpm": {
+            "build": {
+                "target": "ohos-arm-release/packages/phone/images"
+            },
+            "bundles":[
+                "@ohos/hi3516dv300_standard",
+                "@ohos/hispark_taurus_linux",
+                "@ohos/hispark_taurus_standard"
+            ],
+            "board_alias": [
+                "hi3516"
+            ]
+        },
+        "hb": {
+            "build": {
+                "product": "ipcamera_hispark_taurus_linux@hisilicon",
+                "board": "hispark_taurus"
+            },
+            "products": [
+                "ipcamera_hispark_taurus_linux@hisilicon",
+                "hispark_taurus_standard@hisilicon"
+            ],
+            "board_alias": [
+                "hispark_taurus_linux"
+            ]
+        }
+    },
+    "name": "Hi3516DV300",
+    "platforms": [
+        "hisilicon_arm",
+        "hisilicon_arm_linux"
+    ],
+    "upload": {
+        "partitions_profile": {
+            "ohos-sources": {
+                "profile": "out/hi3516dv300/packages/phone/images/Hi3516DV300-emmc.xml",
+                "profile_version": {
+                    "3.0": "out/ohos-arm-release/packages/phone/images/Hi3516DV300-emmc.xml"
+                }
+            },
+            "hispark_taurus_standard@hisilicon": {
+                "profile": "out/hi3516dv300/packages/phone/images/Hi3516DV300-emmc.xml"
+            },
+            "@ohos/hispark_taurus_standard": {
+                "profile": "out/ohos-arm-release/packages/phone/images/Hi3516DV300-emmc.xml"
+            },
+            "@ohos/hi3516dv300_standard": {
+                "profile": "out/ohos-arm-release/packages/phone/images/Hi3516DV300-emmc.xml"
+            }
+        },
+        "offset_address": "0x82000000",
+        "protocol": "hiburn-usb",
+        "protocols": [
+            "hiburn-usb",
+            "hiburn-serial",
+            "hiburn-net"
+        ],
+        "maximum_ram_size": 0,
+        "maximum_size": 16777216
+    },
+    "supported_os": ["linux"],
+    "url": "http://www.hisilicon.com/en/Products/ProductList/Camera",
+    "vendor": "HiSilicon"
+}

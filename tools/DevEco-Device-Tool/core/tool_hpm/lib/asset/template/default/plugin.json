@@ -1,0 +1,25 @@
+{
+  "name":"plugin",
+  "version":"1.0.0",
+  "description":"An empty template for plugin.",
+  "publishAs":"plugin",
+  "license": "Apache V2",
+  "plugin": {
+    "entry": "",
+    "ui": {
+      "source": "",
+      "extensionPoint": "",
+      "router": "",
+      "callAddonApi": "",
+      "config": {
+        "entry": "",
+        "icon": "",
+        "label": ""
+      }
+    },
+    "title": {
+      "en": "",
+      "zh_CN": ""
+    }
+  }
+}

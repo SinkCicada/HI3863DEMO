@@ -1,0 +1,39 @@
+{
+    "build": {
+        "cpu": "cortex-m",
+        "f_cpu": "2000000000L",
+        "mcu": "NRF52840-DK",
+        "device_level": 0
+    },
+    "debug": {},
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "target": "_build"
+            },
+            "output_bin":{
+                "app": "nrf52840_xxaa.hex"
+            }
+        },
+        "hpm":{
+            "bundles": [
+            ]
+        }
+    },
+    "upload":{
+        "partition_types": {
+            "app": {}
+        },
+        "protocol": "nrf-command",
+        "protocols": [
+            "nrf-command"
+        ]
+    },
+    "name": "NRF52840-DK",
+    "platforms": [
+        "nordic"
+    ],
+    "supported_os": ["windows"],
+    "url": "",
+    "vendor": "Nordic"
+}

@@ -1,0 +1,76 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "900000000L",
+        "mcu": "Hi3861",
+        "device_level": 0
+    },
+    "memory": {
+        "mcu": {
+            "size": "0x200000"
+        }
+    },
+    "debug": {
+        "jlink_target": "RISC-V",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": [
+            "gdb"
+        ],
+        "openocd_target": "hi3861",
+        "entry_point": "0x40d3c0"
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "hi3861"
+            },
+            "products": [
+                "hi3861@hisilicon"
+            ],
+            "menuconfig": {
+                "path": "device/hisilicon/hi3861/sdk_liteos",
+                "cmd": "./build.sh menuconfig"
+            },
+            "build_ota": {
+                "path": "device/hisilicon/hi3861/sdk_liteos",
+                "cmd": "./build.sh"
+            }
+        }
+    },
+    "name": "WF-H861-RTA1",
+    "platforms": [
+        "hisilicon_riscv"
+    ],
+    "base_packages": [],
+    "upload": {
+        "framework_partition": {
+            "hi3861@hisilicon": {
+                "output_bin": {
+                    "app": "out/hi3861/hi3861/Hi3861_wifiiot_app_allinone.bin"
+                }
+            }
+        },
+        "partition_types": {
+            "app": {}
+        },
+        "speed": 921600,
+        "delay": {
+            "time": 300
+        },
+        "protocol": "hiburn-serial",
+        "protocols": [
+            "hiburn-serial"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": [
+        "linux"
+    ],
+    "url": "https://www.hisilicon.com/en/products/smart-iot/ShortRangeWirelessIOT",
+    "vendor": "HiSilicon"
+}

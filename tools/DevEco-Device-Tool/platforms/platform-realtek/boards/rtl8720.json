@@ -1,0 +1,47 @@
+{
+    "build": {
+        "cpu": "Armv8-M KM4",
+        "f_cpu": "900000000L",
+        "mcu": "rtl8720",
+        "device_level": 0
+    },
+    "debug": {},
+    "upload": {
+        "framework_partition": {
+            "pdt01@rtl_pdt": {
+                "output_bin": {
+                    "flash": "out/rtl8720/pdt01/bin/flash_is.bin"
+                }
+            }
+        },
+        "partition_types": {
+            "flash": {
+                "non_erasable": true
+            }
+        },
+        "suite_tool": false,
+        "protocol": "amebazpgtool",
+        "protocols": [
+            "amebazpgtool"
+        ]
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "rtl8720"
+            },
+            "products": [
+                "pdt01@rtl_pdt"
+            ]
+        }
+    },
+    "platforms": [
+        "realtek"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "name": "rtl8720",
+    "url": "",
+    "vendor": "Realtek"
+}

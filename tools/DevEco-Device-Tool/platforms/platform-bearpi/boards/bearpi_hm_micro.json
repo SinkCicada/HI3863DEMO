@@ -1,0 +1,62 @@
+{
+    "build": {
+        "cpu": "cortex-a7",
+        "f_cpu": "650000000L",
+        "mcu": "stm32mp157",
+        "device_level": 0
+    },
+    "memory": {},
+    "debug": {},
+    "upload": {
+        "partition_types": {
+            "kernel": {},
+            "rootfs": {},
+            "userfs": {},
+            "bearpi_hm_micro_mx_serialboot": {},
+            "bearpi_hm_micro_mx_trusted": {},
+            "u_boot_bootloader": {},
+            "u_boot": {},
+            "bearpi_hm_micro_tsv": {}
+        },
+        "protocol": "STM32_Programmer_CLI",
+        "protocols": [
+            "STM32_Programmer_CLI"
+        ],
+        "framework_partition": {
+            "bearpi_hm_micro@bearpi": {
+                "output_bin": {
+                    "kernel": "out/bearpi_hm_micro/bearpi_hm_micro/OHOS_Image.stm32",
+                    "rootfs": "out/bearpi_hm_micro/bearpi_hm_micro/rootfs_vfat.img",
+                    "userfs": "out/bearpi_hm_micro/bearpi_hm_micro/userfs_vfat.img",
+                    "bearpi_hm_micro_mx_serialboot": "device/board/bearpi/bearpi_hm_micro/tools/download_img/arm-trusted-firmware/tf-a-stm32mp157a-bearpi-hm_micro-mx-serialboot.stm32",
+                    "bearpi_hm_micro_mx_trusted": "device/board/bearpi/bearpi_hm_micro/tools/download_img/arm-trusted-firmware/tf-a-stm32mp157a-bearpi-hm_micro-mx-trusted.stm32",
+                    "u_boot_bootloader": "device/board/bearpi/bearpi_hm_micro/tools/download_img/bootloader/u-boot_bootloader.stm32",
+                    "u_boot": "device/board/bearpi/bearpi_hm_micro/tools/download_img/bootloader/u-boot.stm32",
+                    "bearpi_hm_micro_tsv": "device/board/bearpi/bearpi_hm_micro/tools/download_img/flashlayout/bearpi-hm_micro.tsv"
+                }
+            }
+        }
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "bearpi_hm_micro"
+            },
+            "products": [
+                "bearpi_hm_micro@bearpi"
+            ],
+            "board_alias": [
+                "bearpi_hm_micro"
+            ]
+        }
+    },
+    "name": "stm32mp157",
+    "platforms": [
+        "bearpi"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "url": "",
+    "vendor": "bearpi"
+}

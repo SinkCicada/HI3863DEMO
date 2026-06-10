@@ -1,0 +1,75 @@
+{
+    "name": "@ohos/hpm-cli",
+    "version": "1.5.0",
+    "description": "CLI for HarmonyOS package manager",
+    "main": "lib/main.js",
+    "scripts": {
+        "build": "node hpm-build.js",
+        "test": "cross-env NODE_ENV=test&& jest --coverage",
+        "pack": "npm run build && npm pack",
+        "debug": "node hpm-debug-build.js",
+        "lint": "eslint src/**/*.js --fix",
+        "pack:bundle": "npm install -D bundled-dependencies && npx bundled-dependencies && npm pack"
+    },
+    "bin": {
+        "hpm": "./bin/hpm"
+    },
+    "author": "",
+    "keywords": [
+        "harmonyos",
+        "hpm",
+        "cli"
+    ],
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@ohos/hpm-cli-dag": "^1.0.3",
+        "@ohos/hpm-cli-notice": "^1.0.3",
+        "@ohos/hpm-cli-ui": "^1.0.2",
+        "@ohos/hpm-cli-x2h": "^1.0.4",
+        "axios": "^0.23.0",
+        "commander": "^7.0.0",
+        "compressing": "^1.5.1",
+        "form-data": "^4.0.0",
+        "https-proxy-agent": "^5.0.0",
+        "idempotent-babel-polyfill": "^7.4.4",
+        "inquirer": "^7.3.3",
+        "log4js": "^6.3.0",
+        "semver": "^7.1.3",
+        "shelljs": "^0.8.5",
+        "tar": "^6.1.11"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.14.3",
+        "@babel/core": "^7.14.3",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/preset-env": "^7.8.6",
+        "babel-eslint": "^10.1.0",
+        "bundled-dependencies": "^2.1.0",
+        "cross-env": "^7.0.2",
+        "eslint": "^7.14.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.23.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "jest": "^25.1.0",
+        "mock-stdin": "^1.0.0"
+    },
+    "bundledDependencies": [
+        "@ohos/hpm-cli-dag",
+        "@ohos/hpm-cli-notice",
+        "@ohos/hpm-cli-ui",
+        "@ohos/hpm-cli-x2h",
+        "axios",
+        "commander",
+        "compressing",
+        "form-data",
+        "https-proxy-agent",
+        "idempotent-babel-polyfill",
+        "inquirer",
+        "log4js",
+        "semver",
+        "shelljs",
+        "tar"
+    ]
+}

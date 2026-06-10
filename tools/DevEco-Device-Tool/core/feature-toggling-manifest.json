@@ -1,0 +1,5 @@
+{
+    "platforms": {
+        "description": "Platform filter. Set platform as false, to disable it."
+    }
+}

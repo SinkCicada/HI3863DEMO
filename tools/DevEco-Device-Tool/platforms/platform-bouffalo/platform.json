@@ -1,0 +1,37 @@
+{
+    "name": "bouffalo",
+    "title": "Bouffalo",
+    "description": "Bouffalo embedded platform",
+    "url": "https://hpm.harmonyos.com/#/cn/home",
+    "homepage": "https://device.harmonyos.com/cn/ide",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "~3.0.0"
+    },
+    "version": "3.1.400",
+    "frameworks":{
+        "hb":{
+            "script":"builder/frameworks/hb.py"
+        }
+    },
+    "packageRepositories": [
+    ],
+    "packages": {
+        "ninja":{
+            "type": "tool",
+            "optional": true
+        },
+        "gn":{
+            "type": "tool",
+            "optional": true
+        },
+        "gcc_riscv32":{
+            "type":"toolchain",
+            "optional":false
+        },
+        "llvm":{
+            "type": "toolchain",
+            "optional": true
+        }
+    }
+}

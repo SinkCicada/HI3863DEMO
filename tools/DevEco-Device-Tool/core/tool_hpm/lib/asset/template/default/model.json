@@ -1,0 +1,24 @@
+{
+  "name": "model",
+  "version": "1.0.0",
+  "description": "product model",
+  "publishAs": "template",
+  "license": "Apache V2",
+  "model": {
+    "productionLineId": "default",
+    "code": "default",
+    "name": { "en": "product model", "zh": "产品模型" },
+    "description": {
+      "en": "describe it",
+      "zh": "描述一下"
+    },
+    "version": "1.1.1",
+    "files": {
+      "template": "template.zip",
+      "data": "subsystem.json",
+      "logic": "logic.js"
+    },
+    "subsystems": [],
+    "steps": []
+  }
+}

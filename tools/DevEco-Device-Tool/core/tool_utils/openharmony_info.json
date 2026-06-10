@@ -1,0 +1,108 @@
+[
+	{
+		"name": "OpenHarmony-v3.0.3-LTS",
+		"version": "3.0.3",
+		"size": "9.2G",
+		"download_url": "https://repo.huaweicloud.com/harmonyos/os/3.0.3/code-v3.0.3-LTS.tar.gz",
+		"sha256": "https://repo.huaweicloud.com/harmonyos/os/3.0.3/code-v3.0.3-LTS.tar.gz.sha256",
+		"mcu_board_product": {
+			"Hi3861": {
+				"hisilicon_riscv:hi3861": "wifiiot_hispark_pegasus@hisilicon"
+			},
+			"Hi3516DV300": {
+				"hisilicon_arm:hi3516dv300": "ipcamera_hispark_taurus@hisilicon",
+				"hisilicon_arm_linux:hi3516dv300:linux": "Hi3516DV300@built-in,ipcamera_hispark_taurus_linux@hisilicon"
+			},
+			"qemu": {
+				"qemu:arm_virt": "qemu_small_system_demo@ohemu",
+				"qemu:MPS2_AN386": "qemu_mini_system_demo@ohemu"
+			}
+		}
+	},
+	{
+		"name": "OpenHarmony-v3.1-Release",
+		"version": "3.1",
+		"size": "15G",
+		"download_url": "https://repo.huaweicloud.com/harmonyos/os/3.1-Release/code-v3.1-Release.tar.gz",
+		"sha256": "https://repo.huaweicloud.com/harmonyos/os/3.1-Release/code-v3.1-Release.tar.gz.sha256",
+		"mcu_board_product": {
+			"Hi3861": {
+				"hisilicon_riscv:hi3861": "wifiiot_hispark_pegasus@hisilicon",
+				"hisilicon_riscv:bearpi_hm_nano": "bearpi_hm_nano@bearpi"
+			},
+			"Hi3516DV300": {
+				"hisilicon_arm:hi3516dv300": "ipcamera_hispark_taurus@hisilicon",
+				"hisilicon_arm_linux:hi3516dv300:linux": "Hi3516DV300@built-in,ipcamera_hispark_taurus_linux@hisilicon"
+			},
+			"DAYU": {
+				"hihope:hh_scdy100": "DAYU@built-in"
+			},
+			"rk3568": {
+				"rockchip:hh_scdy200": "rk3568@built-in"
+			},
+			"qemu": {
+				"qemu:arm_virt": "qemu_small_system_demo@ohemu",
+				"qemu:MPS2_AN386": "qemu_mini_system_demo@ohemu"
+			}
+		}
+	},
+	{
+		"name": "OpenHarmony-v3.2-Beta3",
+		"version": "3.2-Beta3",
+		"size": "20.2G",
+		"download_url": "https://repo.huaweicloud.com/harmonyos/os/3.2-Beta3/code-v3.2-Beta3.tar.gz",
+		"sha256": "https://repo.huaweicloud.com/harmonyos/os/3.2-Beta3/code-v3.2-Beta3.tar.gz.sha256",
+		"mcu_board_product": {
+            "Hi3861": {
+                "hisilicon_riscv:hi3861": "wifiiot_hispark_pegasus@hisilicon",
+				"hisilicon_riscv:bearpi_hm_nano": "bearpi_hm_nano@bearpi"
+            },
+            "stm32mp157": {
+                "bearpi:bearpi_hm_micro": "bearpi_hm_micro@bearpi"
+            },
+            "gr5515": {
+                "goodix:gr5515_sk": "gr5515_sk_xts_demo@goodix,gr5515_sk_iotlink_demo@goodix"
+            },
+            "Hi3516DV300": {
+                "hisilicon_arm:hi3516dv300": "ipcamera_hispark_taurus@hisilicon",
+                "hisilicon_arm_linux:hi3516dv300:linux": "ipcamera_hispark_taurus_linux@hisilicon,hispark_taurus_standard@hisilicon"
+            },
+            "Hi3751v350": {
+                "hisilicon_arm_linux:hi3751v350": "hispark_phoenix@hisilicon"
+            },
+            "rk3568": {
+                "rockchip:hh_scdy200": "rk3568@hihope"
+            },
+            "qemu": {
+                "qemu:arm_virt": "qemu_small_system_demo@ohemu",
+                "qemu:MPS2_AN386": "qemu_mini_system_demo@ohemu"
+            }
+        }
+	},
+	{
+		"name": "OpenHarmony-v3.2-Beta4",
+		"version": "3.2-Beta4",
+		"size": "19G",
+		"download_url": "https://repo.huaweicloud.com/harmonyos/os/3.2-Beta4/code-v3.2-Beta4.tar.gz",
+		"sha256": "https://repo.huaweicloud.com/harmonyos/os/3.2-Beta4/code-v3.2-Beta4.tar.gz.sha256",
+		"mcu_board_product": {
+			"Hi3861": {
+				"hisilicon_riscv:hi3861": "wifiiot_hispark_pegasus@hisilicon"
+			},
+			"Hi3516DV300": {
+				"hisilicon_arm:hi3516dv300": "ipcamera_hispark_taurus@hisilicon",
+				"hisilicon_arm_linux:hi3516dv300:linux": "ipcamera_hispark_taurus_linux@hisilicon,hispark_taurus_standard@hisilicon"
+			},
+			"Hi3751v350": {
+				"hisilicon_arm_linux:hi3751v350": "hispark_phoenix@hisilicon"
+			},
+			"rk3568": {
+				"rockchip:hh_scdy200": "rk3568@hihope"
+			},
+			"qemu": {
+				"qemu:arm_virt": "qemu_small_system_demo@ohemu",
+				"qemu:MPS2_AN386": "qemu_mini_system_demo@ohemu"
+			}
+		}
+	}
+]

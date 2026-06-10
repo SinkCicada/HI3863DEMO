@@ -1,0 +1,60 @@
+{
+    "build": {
+        "cpu": "cortex-a7",
+        "f_cpu": "900000000L",
+        "mcu": "qemu"
+    },
+    "memory": {
+        "nand": {
+            "size": "0x4000000"
+        }
+    },
+    "debug": {
+        "qemu_target": "qemu_mini_system_demo",
+        "default": "qemu",
+        "client": "gdb",
+        "clients": ["lldb", "gdb"]
+    },
+    "frameworks": {
+       "hb": {
+            "build": {
+		        "product": "qemu_mini_system_demo",
+                "board": "arm_mps2_an386",
+                "part": "//device/qemu/arm_mps2_an386"
+            },
+            "output_bin":{
+                "app": "out/device/qemu/arm_mps2_an386"
+            },
+           "qemu_image": [
+            "OHOS_Image"
+           ],
+           "products": ["qemu_mini_system_demo@ohemu"]
+        }
+    },
+    "name": "MPS2_AN386",
+    "platforms": [
+        "qemu"
+    ],
+    "upload": {
+        "partition_types": {
+            "kernel": {
+                "addr": "0x000000",
+                "length": "0x9C0000",
+                "mem": "nand"
+            },
+            "bootargs": {
+                "addr": "0x9C0000",
+                "length": "0x40000",
+                "mem": "nand"
+            },
+            "rootfs": {
+                "addr": "0xA00000",
+                "length": "0x3600000",
+                "mem": "nand"
+            }
+        }
+    },
+    "supported_os": ["linux"],
+    "url": "https://qemu.org",
+    "vendor": "QEMU"
+}

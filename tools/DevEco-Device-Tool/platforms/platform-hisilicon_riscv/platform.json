@@ -1,0 +1,56 @@
+{
+    "name": "hisilicon_riscv",
+    "title": "HiSilicon_Riscv",
+    "description": "HiSilicon embedded platform",
+    "url": "https://hpm.harmonyos.com/#/cn/home",
+    "homepage": "https://device.harmonyos.com/cn/ide",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "~3.0.0"
+    },
+    "version": "3.1.400",
+    "frameworks":{
+        "ohos-sources":{
+            "script":"builder/frameworks/ohos-sources.py"
+        },
+        "hb":{
+            "script":"builder/frameworks/hb.py"
+        },
+        "hpm":{
+            "script":"builder/frameworks/hpm.py"
+        }
+    },
+    "packageRepositories": [
+    ],
+    "packages": {
+        "ninja":{
+            "type": "tool",
+            "optional": true
+        },
+        "gn":{
+            "type": "tool",
+            "optional": true
+        },
+        "tool_openjdk_jre": {
+            "type": "toolchain",
+            "optional": true,
+            "version": "1.8.0-322"
+        },
+        "gcc_riscv32": {
+            "type": "toolchain",
+            "optional": true
+        },
+        "hcc_riscv32": {
+            "type": "toolchain",
+            "optional": true
+        },
+        "tool_burn": {
+            "type": "uploader",
+            "optional": true
+        },
+        "tool_msys":{
+            "type": "tool",
+            "optional": true
+        }
+    }
+}

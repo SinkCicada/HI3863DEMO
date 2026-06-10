@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote fetch="enter_code_repository_address" name="sig" review="enter_code_repository_address"/>
+    <project name="enter_sub_code_repository_name2" path="vendor/productCompany" revision="master" remote="sig"/>
+    <project name="enter_sub_code_repository_name3" path="device/boardCompany" revision="master" remote="sig"/>
+</manifest>

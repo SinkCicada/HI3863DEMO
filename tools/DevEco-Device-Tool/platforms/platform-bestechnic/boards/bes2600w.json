@@ -1,0 +1,47 @@
+{
+    "build": {
+        "cpu": "cortex-m",
+        "f_cpu": "900000000L",
+        "mcu": "bes2600w",
+        "device_level": 0
+    },
+    "debug": {},
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "bes2600w"
+            },
+            "products": [
+                "wifiiot_bes2600w@bestechnic"
+            ]
+        }
+    },
+    "name": "bes2600w",
+    "platforms": [
+        "bestechnic"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "upload": {
+        "framework_partition": {
+            "wifiiot_bes2600w@bestechnic": {
+                "output_bin": {
+                    "app": "out/bes2600w/wifiiot_bes2600w/bin/wifiiot_sdk_bes2600w.bin"
+                }
+            }
+        },
+        "partition_types": {
+            "app": {
+                "non_erasable": true
+            }
+        },
+        "suite_tool": false,
+        "protocol": "dldtool",
+        "protocols": [
+            "dldtool"
+        ]
+    },
+    "url": "http://www.bestechnic.com/home/index",
+    "vendor": "Bestechnic"
+}

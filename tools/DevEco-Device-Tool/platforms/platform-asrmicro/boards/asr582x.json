@@ -1,0 +1,48 @@
+{
+    "build": {
+        "cpu": "cortex-m4",
+        "f_cpu": "52000000L",
+        "mcu": "asr582x",
+        "device_level": 0
+    },
+    "memory": {
+        "emmc": {
+            "size": "0x4B00000"
+        }
+    },
+    "debug": {},
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "asr582x"
+            },
+            "products": [
+                "asr582x@asr",
+                "wb01@midea"
+            ]
+        }
+    },
+    "upload": {
+        "framework_partition": {
+            "asr582x@asr": {
+                "output_bin": {
+                    "app": "out/asr582x/asr582x/bin/duetiot_582x.bin"
+                }
+            },
+            "wb01@midea": {
+                "output_bin": {
+                    "app": "out/asr582x/wb01/bin/duetiot_582x.bin"
+                }
+            }
+        }
+    },
+    "name": "asr582x",
+    "platforms": [
+        "asrmicro"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "url": "",
+    "vendor": "midea"
+}

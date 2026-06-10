@@ -1,0 +1,29 @@
+Statement About HUAWEI DevEco Device Tool and Privacy
+
+Last updated: March 30, 2022
+
+HUAWEI DevEco Device Tool (hereinafter referred to as DevEco Device Tool) is a one-stop integrated development environment (IDE) provided by Huawei Device Co., Ltd. for smart device developers. It allows on-demand customization of HarmonyOS and OpenHarmony components, as well as code editing, compiling, burning, debugging, etc. The tool supports the C and C++ languages and can be installed in Visual Studio Code as a plug-in. Huawei takes your personal information and privacy seriously, and is committed to taking appropriate security measures to protect your personal information in accordance with relevant laws and established industry security standards.
+1.How We Collect and Use Your Personal Information
+We will provide you with the following services or functions through DevEco Device Tool. To enter into the relevant contract, we will process the following information that is necessary for us to provide said functions or services to you. If you do not provide the required information, your use of the functions in this IDE will be affected.
+1.1.Sign-in authentication
+Huawei provides registration and sign-in services through the HUAWEI ID platform. For details about the personal information collected and used during HUAWEI ID registration and sign-in, please view the Statement About HUAWEI ID and Privacy.
+If you choose to sign in to DevEco Device Tool with your HUAWEI ID, we will collect your HUAWEI ID information for the purpose of providing sign-in authentication services. If you do not want to sign in with your HUAWEI ID, you may use DevEco Device Tool as a guest.
+For more details about your rights and possible obligations regarding your registration and use of HUAWEI ID, please view the HUAWEI ID User Agreement and Statement About HUAWEI ID and Privacy.
+1.2.Data collection & analysis
+When you install DevEco Device Tool on your device, a random universally unique identifier (UUID) of your device will be generated. To collect statistics on and analyze the use of each DevEco Device Tool function, we will collect the UUID, app run logs, and app operation logs. Relevant information will be anonymized.
+
+2.Protection of Minors
+We attach great importance to the protection of the personal information of minors. To that end, Huawei provides services and protection for minors in strict accordance with national laws and regulations. If you are a minor, your parent or legal guardian must agree to your use of this app, and agree to the applicable terms and conditions on your behalf. Parents or legal guardians shall also take appropriate precautions to protect minors, including monitoring their use of this app.
+If you are a child (under fourteen (14) years old), please make sure to notify your parent or legal guardian about carefully reading with you this Statement and the Huawei Consumer Business Statement About Children's Privacy Protection specifically formulated by us before you use our services, and use our services or provide information to us with the consent of your parent or legal guardian. If you are a parent or a legal guardian of a child, make sure that the child under your guardianship uses our services and provides information to us with your consent or guidance.
+
+3.Information Storage Location and Retention Period
+The aforementioned information will be sent to and stored on servers in the People's Republic of China.
+We will retain such information for the period necessary to fulfill the purposes described in this Statement, and delete it beyond the time set out below, except as otherwise required by applicable laws and regulations.
+
+•The collected device UUID and app use information will be retained for no longer than two (2) years.
+In the event that we discontinue our products or services, we will notify you in the form of a push notification, announcement, or by other means, and delete your personal information within a reasonable period of time.
+
+4.Contacting Us
+We have appointed the person responsible for personal information protection. You may contact the person by visiting the Privacy Questions page. We will reply as soon as possible.
+If you are not satisfied with the response you receive, especially if you feel that our processing or handling of your personal information has violated or infringed on your legal rights and/or interests, you may seek external resolution, whether by filing a lawsuit with the people's court in the relevant jurisdiction, submitting a complaint to the industry self-regulation association or relevant government regulatory agencies, or by other means. You may also consult us regarding the available channels for voicing your complaint.
+Huawei's collection and use of your personal information is governed by our privacy policy. For more information, please refer to the Huawei Consumer Business Privacy Statement.

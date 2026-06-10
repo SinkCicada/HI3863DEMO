@@ -1,0 +1,19 @@
+{
+    "product_name": "my_product",
+    "ohos_version": "OpenHarmony 3.0",
+    "device_company": "device_company",
+    "board": "board_name",
+    "kernel_type": "liteos_m",
+    "kernel_version": "",
+    "subsystems": [
+      {
+        "subsystem": "startup",
+        "components": [
+          { "component": "bootstrap_lite", "features":[] },
+          { "component": "syspara_lite", "features":[] }
+        ]
+      }
+    ],
+    "third_party_dir": "",
+    "product_adapter_dir": "//vendor/my_company/my_product/hals"
+  }

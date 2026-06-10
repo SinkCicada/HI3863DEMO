@@ -1,0 +1,51 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "900000000L",
+        "mcu": "bl602",
+        "device_level": 0
+    },
+    "debug": {},
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "bl602"
+            },
+            "products": [
+                "bl602_wifiModule@bouffalo"
+            ]
+        }
+    },
+    "upload": {
+        "framework_partition": {
+            "bl602_wifiModule@bouffalo": {
+                "output_bin": {
+                    "firmware": "out/bl602/bl602_wifiModule/whole_flash_data.bin"
+                }
+            }
+        },
+        "partition_types": {
+            "firmware": {}
+        },
+        "speed": 2000000,
+        "suite_tool": false,
+        "protocol": "bflb_eflash_loader",
+        "protocols": [
+            "bflb_eflash_loader"
+        ]
+    },
+    "monitor": {
+        "speed": "921600",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "name": "bl602",
+    "platforms": [
+        "bouffalo"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "url": "https://www.bouffalolab.com/",
+    "vendor": "Bouffalo"
+}

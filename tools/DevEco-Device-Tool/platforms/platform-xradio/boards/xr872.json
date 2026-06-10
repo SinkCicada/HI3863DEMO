@@ -1,0 +1,37 @@
+{
+    "build": {
+        "cpu": "ARM Cortex-M4F",
+        "f_cpu": "900000000L",
+        "mcu": "xr872",
+        "device_level": 0
+    },
+    "memory": {
+        "spi": {
+            "size": "0x400000"
+        }
+    },
+    "debug": {},
+    "upload": {
+        "partition_types": {
+            "system": {
+                "non_erasable": true
+            }
+        },
+        "speed": 115200,
+        "suite_tool": false,
+        "protocol": "phoenixmc",
+        "protocols": [
+            "phoenixmc"
+        ]
+    },
+    "frameworks": {},
+    "platforms": [
+        "xradio"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "name": "xr872",
+    "url": "",
+    "vendor": "Xradio"
+}

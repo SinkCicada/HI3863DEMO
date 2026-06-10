@@ -1,0 +1,35 @@
+{
+    "build": {
+    },
+    "debug": {
+        "openocd_target": "",
+        "jlink_target": "",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": ["gdb"]
+    },
+    "frameworks": {
+        "ohos-sources": {
+        },
+         "hpm": {
+            "bundles": [
+            ]
+        },
+        "hb": {
+        }
+    },
+    "name": "Blank",
+    "platforms": [
+        "blank"
+    ],
+    "upload": {
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": ["windows", "linux"],
+    "url": "https://device.harmonyos.com/en/ide",
+    "vendor": "Huawei"
+}

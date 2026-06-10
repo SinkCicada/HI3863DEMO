@@ -1,0 +1,48 @@
+{
+    "build": {
+      "cpu": "cortex-a7",
+      "f_cpu": "900000000L",
+      "mcu":"imx6ull",
+      "device_level": 1
+    },
+    "memory":{
+        "emmc":{
+           "size": "0x100000000"
+        }
+    },
+    "debug": {
+        "openocd_target": "imx6ull",
+        "entry_point": "0x80000000",
+        "default": "openocd",
+        "clients": ["gdb"],
+        "client": "gdb"
+    },
+    "upload": {
+        "partition_types": {
+            "fastboot": {
+                "non_erasable": true
+            },
+            "kernel": {
+              "destination":"liteos.bin",
+              "non_erasable": true
+            },
+            "rootfs": {
+              "destination":"rootfs.jffs2",
+              "non_erasable": true
+            }
+           
+        },
+        "protocol": "uuu",
+        "protocols": [
+            "uuu"
+        ]
+    },
+    "frameworks": {
+    },
+    "platforms":["nxp"],
+    "supported_os": ["windows"],
+    "name": "imx6ull",
+    "url": "",
+    "vendor": "Nxp"
+  }
+  

@@ -1,0 +1,332 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "900000000L",
+        "mcu": "Hi3861",
+        "device_level": 0
+    },
+    "memory": {
+        "mcu": {
+            "size": "0x200000"
+        }
+    },
+    "debug": {
+        "jlink_target": "RISC-V",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": [
+            "gdb"
+        ],
+        "openocd_target": "hi3861",
+        "entry_point": "0x40d3c0"
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "target": "wifiiot"
+            }
+        },
+        "hb": {
+            "build": {
+                "board": "hispark_pegasus"
+            },
+            "products": [
+                "wifiiot_hispark_pegasus@hisilicon"
+            ],
+            "board_alias": [
+                "hispark_pegasus"
+            ]
+        },
+        "hpm": {
+            "build": {
+                "target": "hispark_pegasus/wifiiot_hispark_pegasus"
+            },
+            "output_bin": {
+                "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+            },
+            "analysis_bin": {
+                "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+            },
+            "gcc_riscv32_path": "ohos_bundles/@ohos/gcc_riscv32/gcc_riscv32/bin",
+            "bundles": [
+                "@ohos/hispark_pegasus",
+                "@opensource/hoperun_hm_trashcan",
+                "@opensource/hoperun_hm_cleaner",
+                "@opensource/hoperun_hm_safe",
+                "@opensource/hoperun_hm_music",
+                "@opensource/hoperun_hm_ithc",
+                "@opensource/hoperun_hm_timer",
+                "@opensource/hoperun_hm_uart",
+                "@opensource/hoperun_hm_ilcl",
+                "@opensource/hoperun_hm_lamp",
+                "@opensource/hoperun_hm_mutex",
+                "@opensource/hoperun_hm_moleds",
+                "@opensource/hoperun_hm_brightlights",
+                "@opensource/hoperun_hm_delay",
+                "@opensource/hoperun_hm_trafficlights",
+                "@opensource/hoperun_hm_thread",
+                "@opensource/hoperun_hm_message",
+                "@opensource/hoperun_hm_ap",
+                "@opensource/hoperun_hm_sta",
+                "@opensource/hoperun_hm_iem",
+                "@opensource/hoperun_hm_oledplayer",
+                "@opensource/hoperun_hm_led",
+                "@opensource/hoperun_hm_semp"
+            ],
+            "board_alias": [
+                "hi3861"
+            ]
+        }
+    },
+    "name": "Hi3861",
+    "platforms": [
+        "hisilicon_riscv"
+    ],
+    "upload": {
+        "framework_partition": {
+            "ohos-sources": {
+                "output_bin": {
+                    "app": "out/wifiiot/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/wifiiot/Hi3861_wifiiot_app.out",
+                    "map": "out/wifiiot/Hi3861_wifiiot_app.map"
+                }
+            },
+            "wifiiot_hispark_pegasus@hisilicon": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_trashcan": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/smart_trashcan/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/smart_trashcan/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/smart_trashcan/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_cleaner": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/smart_cleaner/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/smart_cleaner/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/smart_cleaner/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_safe": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/smart_safe/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/smart_safe/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/smart_safe/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_music": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_ithc": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_timer": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_uart": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_ilcl": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_lamp": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_mutex": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_moleds": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_brightlights": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_delay": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_trafficlights": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_thread": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_message": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_ap": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_sta": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_iem": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_oledplayer": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_led": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            },
+            "@opensource/hoperun_hm_semp": {
+                "output_bin": {
+                    "app": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                },
+                "analysis_bin": {
+                    "elf": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                    "map": "out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+                }
+            }
+        },
+        "flashAddr": "0x400000",
+        "partition_types": {
+            "app": {
+                "non_erasable": true
+            }
+        },
+        "speed": 921600,
+        "delay": {
+            "time": 300
+        },
+        "suite_tool": false,
+        "protocol": "hiburn-serial",
+        "protocols": [
+            "openocd-serial",
+            "hiburn-serial"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": [
+        "linux"
+    ],
+    "url": "https://www.hisilicon.com/en/products/smart-iot/ShortRangeWirelessIOT",
+    "vendor": "HiSilicon"
+}

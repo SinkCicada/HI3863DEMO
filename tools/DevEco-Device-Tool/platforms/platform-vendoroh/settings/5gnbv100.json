@@ -1,0 +1,64 @@
+{
+    "options": [
+        {
+            "name": "upload_reset",
+            "default": "True"
+        },
+        {
+            "name": "upload_speed",
+            "default": "921600"
+        },
+        {
+            "name": "build_type",
+            "default": "debug"
+        },
+        {
+            "name": "debug_client",
+            "default": "gdb"
+        },
+        {
+            "name": "debug_tool",
+            "default": "jlink"
+        },
+        {
+            "name": "debug_interface",
+            "default": "swd"
+        },
+        {
+            "name": "debug_elf",
+            "default": ".\\build_scons\\5GNBRBIV100\\riscv_HCC\\reference\\application_core\\application.elf"
+        },
+        {
+            "name": "debug_device",
+            "default": "CPU CORE|RISC-V|RISC-V"
+        },
+        {
+            "name": "monitor_port",
+            "default": ""
+        },
+        {
+            "name": "monitor_speed",
+            "default": "115200"
+        },
+        {
+            "name": "analysis_elf_path",
+            "default": ".\\build_scons\\5GNBRBIV100\\riscv_HCC\\reference\\application_core\\application.elf"
+        },
+        {
+            "name": "analysis_map_path",
+            "default": ".\\build_scons\\5GNBRBIV100\\riscv_HCC\\reference\\application_core\\application.map"
+        },
+        {
+            "name": "analysis_compiler_path",
+            "default": ""
+        },
+        {
+            "name": "analysis_mode",
+            "default": "0"
+        },
+        {
+            "name": "analysis_rec_stats",
+            "default": "1"
+        }
+    ]
+}

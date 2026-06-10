@@ -1,0 +1,78 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "900000000L",
+        "mcu": "Hi3861",
+        "device_level": 0
+    },
+    "memory": {
+        "mcu": {
+            "size": "0x200000"
+        }
+    },
+    "debug": {
+        "jlink_target": "RISC-V",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": [
+            "gdb"
+        ],
+        "openocd_target": "hi3861",
+        "entry_point": "0x40d3c0"
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "target": "hispark_pegasus/wifiiot_hispark_pegasus",
+                "board": "hispark_pegasus"
+            },
+            "analysis_bin": {
+                "elf": "src/out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.out",
+                "map": "src/out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app.map"
+            },
+            "output_bin": {
+                "app": "src/out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+            },
+            "gcc_riscv32_path": "./src/build/tools/hcc_riscv32_win/bin"
+        }
+    },
+    "name": "Hi3861",
+    "platforms": [
+        "vendoroh"
+    ],
+    "upload": {
+        "framework_partition": {
+            "hb": {
+                "output_bin": {
+                    "app": "src/out/hispark_pegasus/wifiiot_hispark_pegasus/Hi3861_wifiiot_app_allinone.bin"
+                }
+            }
+        },
+        "flashAddr": "0x400000",
+        "partition_types": {
+            "app": {
+                "non_erasable": true
+            }
+        },
+        "speed": 2000000,
+        "delay": {
+            "time": 300
+        },
+        "suite_tool": false,
+        "protocol": "hiburn-serial",
+        "protocols": [
+            "hiburn-serial"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": [
+        "windows"
+    ],
+    "url": "https://www.hisilicon.com/en/products/smart-iot/ShortRangeWirelessIOT",
+    "needSDK": true,
+    "vendor": "VendorOH"
+}

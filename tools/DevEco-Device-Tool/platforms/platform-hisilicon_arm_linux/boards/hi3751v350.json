@@ -1,0 +1,49 @@
+{
+    "build": {
+        "cpu": "cortex-a53",
+        "f_cpu": "1000000000L",
+        "mcu": "Hi3751V350",
+        "device_level": 2
+    },
+    "memory":{
+    },
+    "debug": {},
+    "upload":{
+        "maximum_ram_size": 1073741824,
+        "maximum_size": 8589934592,
+        "protocol": "hiburn-net",
+        "protocols": [
+            "hiburn-net"
+        ],
+        "partition_types":{},
+        "partitions_profile":{
+            "hb": {
+                "profile": "out/hispark_phoenix/packages/phone/images/Hi3751V350-slaveboot-emmc.xml"
+            },
+            "ohos-sources": {
+                "profile": "out/hi3751v350/packages/phone/images/Hi3751V350-slaveboot-emmc.xml"
+            }
+        } 
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "product": "hispark_phoenix@hisilicon",
+                "board": "hispark_phoenix"
+            }
+        },
+        "ohos-sources": {
+            "build": {
+                "product_name": "Hi3751V350",
+                "target": "hi3751v350/packages/phone/images"
+            }
+        }
+    },
+    "name": "Hi3751v350",
+    "platforms": [
+        "hisilicon_arm_linux"
+    ],
+    "supported_os": ["linux"],
+    "url": "",
+    "vendor": "HiSilion"
+}

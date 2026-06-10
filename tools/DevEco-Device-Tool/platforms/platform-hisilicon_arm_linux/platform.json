@@ -1,0 +1,36 @@
+{
+    "name": "hisilicon_arm_linux",
+    "title": "HiSilicon_Arm_Linux",
+    "description": "HiSilicon embedded platform",
+    "url": "https://hpm.harmonyos.com/#/cn/home",
+    "homepage": "https://device.harmonyos.com/cn/ide",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "~3.0.0"
+    },
+    "version": "3.1.400",
+    "frameworks":{
+        "ohos-sources":{
+            "script":"builder/frameworks/ohos-sources.py"
+        },
+        "hpm":{
+            "script":"builder/frameworks/hpm.py"
+        },
+        "hb":{
+            "script":"builder/frameworks/hb.py"
+        }
+    },
+    "packageRepositories": [
+    ],
+    "packages": {
+        "hc_gen":{
+            "type": "tool",
+            "optional": true
+        },
+        "tool_openjdk_jre": {
+            "type": "toolchain",
+            "optional": true,
+            "version": "1.8.0-322"
+        }
+    }
+}

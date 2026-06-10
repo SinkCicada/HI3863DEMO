@@ -1,0 +1,6 @@
+{
+    "name": "tool_openjdk_jre",
+    "description": "tool_openjdk_jre for DevEco-Device-Tool",
+    "url": "",
+    "version": "1.8.0-322"
+}

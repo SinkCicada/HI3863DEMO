@@ -1,0 +1,67 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "200000000L",
+        "mcu": "3061HRPIKZ",
+        "device_level": 0
+    },
+    "debug": {
+        "jlink_target": "3061HRPIKZ",
+        "default": "jlink",
+        "client": "gdb",
+        "clients": ["gdb"],
+        "openocd_target": "3061HRPIKZ",
+        "entry_point_address": "0x03000004"
+    },
+    "frameworks": {
+        "hpm": {
+            "build": {
+                "target": "bin"
+            },
+            "output_bin":{
+                "app": "out/bin/target.bin"
+            },
+            "analysis_bin": {
+                "elf": "out/bin/target.elf",
+                "map": "out/bin/target.map"
+            }
+        }
+    },
+    "name": "AD101LDMA_VA",
+    "platforms": [
+        "vendorhm"
+    ],
+    "upload": {
+        "speed": 115200,
+        "protocol": "burn-serial",
+        "protocols": [
+            "burn-serial"
+        ],
+        "maximum_ram_size": 16384,
+        "maximum_size": 163840
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "config_options": {
+        "upload_speed": {
+            "choices": [
+                "2400",
+                "4800",
+                "9600",
+                "19200",
+                "38400",
+                "43000",
+                "56000",
+                "57600",
+                "115200"
+            ]
+        }
+    },
+    "url": "",
+    "vendor": "VendorHM",
+    "needSDK": true,
+    "supported_os": ["windows"]
+}

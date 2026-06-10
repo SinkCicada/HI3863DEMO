@@ -1,0 +1,51 @@
+{
+    "build": {
+        "cpu": "cortex-m4f",
+        "f_cpu": "64000000L",
+        "mcu": "gr5515",
+        "device_level": 0
+    },
+    "memory": {
+        "mcu": {
+            "size": "0x1000000"
+        }
+    },
+    "debug": {},
+    "upload": {
+        "suite_tool": true
+    },
+    "frameworks": {
+        "hb": {
+            "build": {
+                "board": "gr5515_sk"
+            },
+            "products": [
+                "gr5515_sk_iotlink_demo@goodix",
+                "gr5515_sk_xts_demo@goodix"
+            ],
+            "board_alias": [
+                "gr5515_sk"
+            ]
+        },
+        "hpm": {
+            "build": {
+                "target": "gr5515"
+            },
+            "bundles": [
+                "@goodix/gr5515_starter_kit"
+            ],
+            "board_alias": [
+                "gr5515"
+            ]
+        }
+    },
+    "name": "gr5515",
+    "platforms": [
+        "goodix"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "url": "",
+    "vendor": "goodix"
+}

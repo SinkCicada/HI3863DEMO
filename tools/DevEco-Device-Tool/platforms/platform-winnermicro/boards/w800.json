@@ -1,0 +1,84 @@
+{
+    "build": {
+        "cpu": "ck804ef",
+        "f_cpu": "900000000L",
+        "mcu": "w800",
+        "device_level": 0
+    },
+    "memory": {
+        "mcu": {
+            "size": "0x200000"
+        }
+    },
+    "debug": {},
+    "upload": {
+        "partition_types": {
+            "app": {}
+        },
+        "speed": 2000000,
+        "protocol": "xmodem",
+        "protocols": [
+            "xmodem"
+        ],
+        "framework_partition": {
+            "wifiiot_neptune@winnermicro": {
+                "output_bin": {
+                    "app": "device/winnermicro/neptune/sdk_liteos/bin/w800/w800.img"
+                }
+            },
+            "neptune_iotlink_demo@hihope": {
+                "output_bin": {
+                    "app": "out/neptune100/neptune_iotlink_demo/bin/hihope_neptune100.img"
+                }
+            },
+            "@hihope/neptune_bluetoothkeyboard": {
+                "output_bin": {
+                    "app": "out/neptune/wifiiot_neptune/w800.img"
+                }
+            }
+        }
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "target": "w800"
+            },
+            "output_bin": {
+                "app": "out/w800/w800.img"
+            }
+        },
+        "hb": {
+            "build": {
+                "board": "neptune"
+            },
+            "products": [
+                "wifiiot_neptune@winnermicro",
+                "neptune_iotlink_demo@hihope"
+            ]
+        },
+        "hpm": {
+            "build": {
+                "target": "w800"
+            },
+            "output_bin": {
+                "app": "out/w800/w800.img"
+            },
+            "bundles": [
+                "@hihope/neptune_iot",
+                "@hihope/neptune_bluetoothkeyboard"
+            ],
+            "board_alias": [
+                "w800"
+            ]
+        }
+    },
+    "name": "w800",
+    "platforms": [
+        "winnermicro"
+    ],
+    "supported_os": [
+        "linux"
+    ],
+    "url": "http://www.winnermicro.com/html/1//156/158/index.html",
+    "vendor": "winnermicro"
+}

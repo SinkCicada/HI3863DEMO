@@ -1,0 +1,29 @@
+{
+    "name": "nordic",
+    "title": "Nordic",
+    "description": "Nordic embedded platform",
+    "url": "https://hpm.harmonyos.com/#/cn/home",
+    "homepage": "https://device.harmonyos.com/cn/ide",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "~3.0.0"
+    },
+    "version": "3.1.400",
+    "frameworks":{
+        "ohos-sources":{
+            "script":"builder/frameworks/ohos-sources.py"
+        }
+    },
+    "packageRepositories": [
+    ],
+    "packages": {
+        "tool_msys": {
+            "type": "toolchain",
+            "optional": true
+        },
+        "arm_noneeabi_gcc": {
+            "type": "toolchain",
+            "optional": true
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "build": {
+        "cpu": "cortex-a",
+        "f_cpu": "2000000000L",
+        "mcu": "DAYU",
+        "device_level": 2
+    },
+    "memory":{
+        "emmc":{
+            "size": "0x1000000000"
+        }
+    },
+    "debug": {},
+    "upload":{
+        "maximum_ram_size": 4294967296,
+        "maximum_size": 68719476736,
+        "partition_types": {
+            "hac": {}
+        },
+        "suite_tool": false,
+        "protocol": "dayu-downloader",
+        "protocols": [
+            "dayu-downloader"
+        ]
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "product_name": "DAYU",
+                "target": "ohos-arm-release/packages/phone/images"
+            },
+            "output_bin":{
+                "hac": "out/ohos-arm-release/packages/phone/images/dayu_nosec_userdebug.hac"
+            }
+        }
+    },
+    "name": "HH-SCDY100",
+    "platforms": [
+        "hihope"
+    ],
+    "supported_os": ["linux"],
+    "url": "",
+    "vendor": "HiHope"
+}

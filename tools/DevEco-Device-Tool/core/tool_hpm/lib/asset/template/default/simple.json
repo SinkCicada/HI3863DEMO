@@ -1,0 +1,6 @@
+{
+    "name":"simple",
+    "version":"1.0.0",
+    "description":"An empty template for source bundle.",
+    "publishAs":"template"
+}

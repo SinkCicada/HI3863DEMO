@@ -1,0 +1,8 @@
+{
+  "registry": "https://repo.harmonyos.com",
+  "strictSsl": true,
+  "unixShell": "/bin/sh",
+  "maxUploadSize": 1073741824,
+  "maxLogNumber": 10,
+  "cache-expiration": 180
+}

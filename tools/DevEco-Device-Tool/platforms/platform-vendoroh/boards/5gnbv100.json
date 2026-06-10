@@ -1,0 +1,50 @@
+{
+    "build": {
+        "cpu": "risc-v",
+        "f_cpu": "900000000L",
+        "mcu": "5GNBV100",
+        "device_level": 0
+    },
+    "debug": {
+        "client": "gdb",
+        "clients": ["gdb"],
+	    "jlink_target":"RISC-V",
+        "default": "jlink"
+    },
+    "frameworks": {
+        "ohos-sources": {
+            "build": {
+                "target": ".\\build_scons\\5GNBRBIV100\\riscv_HCC\\reference\\application_core"
+            },
+            "output_bin":{
+                "app": ".\\build_scons\\5GNBRBIV100\\riscv_HCC\\reference\\application_core\\application_signed.fwpkg"
+            }
+        }
+    },
+    "name": "5GNBV100",
+    "platforms": [
+        "vendoroh"
+    ],
+    "upload": {
+        "partition_types": {
+            "app": {
+                "non_erasable": true
+            }
+        },
+        "speed": 921600,
+        "suite_tool": false,
+        "protocol": "burn-serial",
+        "protocols": [
+            "burn-serial"
+        ]
+    },
+    "monitor": {
+        "speed": "115200",
+        "raw": true,
+        "eol": "CRLF"
+    },
+    "supported_os": ["windows"],
+    "needSDK": true,
+    "url": "",
+    "vendor": "VendorOH"
+}
