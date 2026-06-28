@@ -42,7 +42,7 @@ static void wifi_aircon_demo(void)
     osThreadAttr_t status_task_options = {0};
 
     printf("PZKJ Hi3861 Wi-Fi aircon control demo\r\n");
-    printf("AC power on uses learned group 1; power off uses learned group 2\r\n");
+    printf("AC power on/off use direct raw IR code over UART1\r\n");
 
     server_task_options.name = "airconSrv";
     server_task_options.stack_size = 1024 * 10;

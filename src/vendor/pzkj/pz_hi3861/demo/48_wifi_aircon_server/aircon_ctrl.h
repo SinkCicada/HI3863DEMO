@@ -12,7 +12,6 @@
 int aircon_ctrl_init(void);
 int aircon_ctrl_power_on(void);
 int aircon_ctrl_power_off(void);
-int aircon_ctrl_emit_group(unsigned short group_no);
 unsigned int aircon_ctrl_get_baud(void);
 unsigned char aircon_ctrl_get_state(void);
 const char *aircon_ctrl_get_state_text(void);
