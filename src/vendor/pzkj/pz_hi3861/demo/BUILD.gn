@@ -63,6 +63,7 @@ lite_component("demo") {
     # "45_temp_humi_tcp_server:template",
     # "46_wifi_check:template",
     # "47_servo_io6:template",
-    "60_multi_service_hub:template",
+    "48_wifi_aircon_server:template",
+    # "60_multi_service_hub:template",
   ]
 }
