@@ -107,10 +107,27 @@ def describe_temp_probe(ip, port, timeout):
         return f"not listening or unreachable: {exc}"
 
 
+def describe_ac_probe(ip, port, timeout):
+    try:
+        with socket.create_connection((ip, port), timeout=timeout) as sock:
+            sock.settimeout(timeout)
+            sock.sendall(b"AC QUERY\n")
+            data = sock.recv(160)
+            if not data:
+                return "connected, but no ac text received"
+            preview = data.decode("utf-8", errors="replace").replace("\r", "\\r").replace("\n", "\\n")
+            return f"text ok: {preview!r}"
+    except TimeoutError:
+        return "connected, but no ac text before timeout"
+    except OSError as exc:
+        return f"not listening or unreachable: {exc}"
+
+
 def scan_command(args):
     print(f"scan target: {args.ip}")
     print(f"{args.port} DOOR: {describe_door_probe(args.ip, args.port, args.timeout)}")
     print(f"{args.port} TEMP: {describe_temp_probe(args.ip, args.port, args.timeout)}")
+    print(f"{args.port} AC  : {describe_ac_probe(args.ip, args.port, args.timeout)}")
 
 
 def door_command(args):
@@ -153,6 +170,17 @@ def temp_command(args):
             count += 1
 
 
+def ac_command(args):
+    command = f"AC {args.action.upper()}\n".encode("utf-8")
+    with socket.create_connection((args.ip, args.port), timeout=args.timeout) as sock:
+        sock.settimeout(args.timeout)
+        sock.sendall(command)
+        data = sock.recv(256)
+        if not data:
+            raise ConnectionError("server closed connection without reply")
+        print(data.decode("utf-8", errors="replace").strip())
+
+
 def print_packet_reply(reply):
     print(f"reply: {reply['raw_hex']}")
     print(f"cmd  : 0x{reply['cmd']:02x}")
@@ -184,6 +212,9 @@ def build_parser():
         help="number of lines to read, 0 means forever",
     )
 
+    ac = subparsers.add_parser("ac", help="control aircon on hub port")
+    ac.add_argument("action", choices=["on", "off", "query"])
+
     subparsers.add_parser("scan", help="probe door binary and temp text protocols")
 
     return parser
@@ -198,6 +229,8 @@ def main():
             door_command(args)
         elif args.service == "temp":
             temp_command(args)
+        elif args.service == "ac":
+            ac_command(args)
         elif args.service == "scan":
             scan_command(args)
         else:

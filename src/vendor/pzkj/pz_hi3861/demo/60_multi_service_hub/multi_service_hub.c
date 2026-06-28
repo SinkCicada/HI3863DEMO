@@ -7,6 +7,7 @@
 #include "cmsis_os2.h"
 #include "securec.h"
 
+#include "aircon_ctrl.h"
 #include "bsp_dht11.h"
 #include "bsp_wifi.h"
 #include "door_ctrl.h"
@@ -45,6 +46,7 @@ static int g_dht11_recover_after_door = 0;
 static unsigned char g_last_temp = 0;
 static unsigned char g_last_humi = 0;
 static const char *g_last_alarm = "NONE";
+static unsigned char g_aircon_enabled = 1;
 
 static unsigned int crc32_update(unsigned int crc, unsigned char data)
 {
@@ -179,6 +181,89 @@ static int send_all_text(int client_fd, const char *text)
     }
 
     return 0;
+}
+
+static unsigned char ascii_upper(unsigned char ch)
+{
+    if (ch >= 'a' && ch <= 'z') {
+        ch = (unsigned char)(ch - ('a' - 'A'));
+    }
+    return ch;
+}
+
+static const char *skip_space(const char *text)
+{
+    while (*text == ' ' || *text == '\t') {
+        ++text;
+    }
+    return text;
+}
+
+static void normalize_text_command(char *text)
+{
+    unsigned int i;
+
+    for (i = 0; text[i] != '\0'; ++i) {
+        if (text[i] == '\r' || text[i] == '\n') {
+            text[i] = '\0';
+            break;
+        }
+        text[i] = (char)ascii_upper((unsigned char)text[i]);
+    }
+}
+
+static int send_aircon_text(int client_fd, const char *result, const char *action, int error_code)
+{
+    char send_buf[192];
+    int len;
+
+    len = sprintf_s(send_buf, sizeof(send_buf),
+        "%s,type=AC,action=%s,state=%s,baud=%u,ip=%s,port=%d,error=%d,enabled=%u\r\n",
+        result,
+        action,
+        aircon_ctrl_get_state_text(),
+        aircon_ctrl_get_baud(),
+        g_hub_ip,
+        HUB_SERVER_PORT,
+        error_code,
+        g_aircon_enabled);
+    if (len <= 0) {
+        return -1;
+    }
+
+    return send_all_text(client_fd, send_buf);
+}
+
+static int handle_aircon_text_command(int client_fd, char *cmd_buf)
+{
+    const char *action;
+    int ret;
+
+    normalize_text_command(cmd_buf);
+    action = skip_space(cmd_buf);
+    if (action[0] == 'A' && action[1] == 'C' &&
+        (action[2] == ' ' || action[2] == '\t')) {
+        action = skip_space(action + 2);
+    }
+
+    if (strcmp(action, "ON") == 0) {
+        ret = aircon_ctrl_power_on();
+        printf("[hub-ac] action=ON ret=%d\r\n", ret);
+        return send_aircon_text(client_fd, (ret == 0) ? "OK" : "ERR", "ON", ret);
+    }
+
+    if (strcmp(action, "OFF") == 0) {
+        ret = aircon_ctrl_power_off();
+        printf("[hub-ac] action=OFF ret=%d\r\n", ret);
+        return send_aircon_text(client_fd, (ret == 0) ? "OK" : "ERR", "OFF", ret);
+    }
+
+    if (strcmp(action, "QUERY") == 0 || strcmp(action, "STATUS") == 0) {
+        return send_aircon_text(client_fd, "OK", "QUERY", 0);
+    }
+
+    return send_all_text(client_fd,
+        "ERR,type=AC,action=UNKNOWN,use AC ON | AC OFF | AC QUERY\r\n");
 }
 
 static const char *detect_alarm_type(unsigned char temp, unsigned char humi)
@@ -396,6 +481,16 @@ static int starts_with_temp_command(const unsigned char *buf, int len)
         (buf[3] == 'P' || buf[3] == 'p');
 }
 
+static int starts_with_ac_command(const unsigned char *buf, int len)
+{
+    if (len < 2) {
+        return 0;
+    }
+
+    return (buf[0] == 'A' || buf[0] == 'a') &&
+        (buf[1] == 'C' || buf[1] == 'c');
+}
+
 static void handle_client(int client_fd)
 {
     unsigned char buf[PROTO_PACKET_SIZE];
@@ -431,9 +526,15 @@ static void handle_client(int client_fd)
         return;
     }
 
+    if (starts_with_ac_command(buf, received)) {
+        ((char *)buf)[received] = '\0';
+        (void)handle_aircon_text_command(client_fd, (char *)buf);
+        return;
+    }
+
     printf("[hub] unknown text command: %.*s\r\n", received, (char *)buf);
     (void)send_all_text(client_fd,
-        "ERR,unknown_command,use TEMP text or 32-byte door binary packet\r\n");
+        "ERR,unknown_command,use TEMP text, AC text, or 32-byte door binary packet\r\n");
 }
 
 static void hub_server_task(void *arg)
@@ -497,6 +598,13 @@ int multi_service_hub_start(void)
     osThreadAttr_t task_options = {0};
 
     door_ctrl_init();
+    ret = aircon_ctrl_init();
+    if (ret != AIRCON_CTRL_RET_OK) {
+        printf("[hub-ac] uart init failed, ret=%d\r\n", ret);
+        g_aircon_enabled = 0;
+    } else {
+        printf("[hub-ac] enabled, uart_baud=%u\r\n", aircon_ctrl_get_baud());
+    }
 
     while (1) {
         printf("[hub] connecting to SSID: %s\r\n", WIFI_SSID);
@@ -513,7 +621,7 @@ int multi_service_hub_start(void)
     (void)strcpy_s(g_hub_ip, sizeof(g_hub_ip), WiFi_GetLocalIP());
     printf("[hub] connected, local ip: %s\r\n", g_hub_ip);
     printf("[hub] one device, one IP, one port: %d\r\n", HUB_SERVER_PORT);
-    printf("[hub] enabled: 45 temp/humi + 47 door servo; 44 LED removed\r\n");
+    printf("[hub] enabled: 45 temp/humi + 47 door servo + 48 aircon; 44 LED removed\r\n");
 
     task_options.name = "hubSrv";
     task_options.stack_size = HUB_SERVER_STACK_SIZE;
