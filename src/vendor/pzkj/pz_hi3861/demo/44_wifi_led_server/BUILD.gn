@@ -1,0 +1,16 @@
+static_library("template") {
+    sources = [
+        "template.c",
+        "led_ctrl.c",
+        "wifi_led_server.c",
+        "//vendor/pzkj/pz_hi3861/common/bsp/src/bsp_wifi.c",
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "//device/hisilicon/hispark_pegasus/hi3861_adapter/kal/cmsis",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//vendor/pzkj/pz_hi3861/common/bsp/include",
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    ]
+}

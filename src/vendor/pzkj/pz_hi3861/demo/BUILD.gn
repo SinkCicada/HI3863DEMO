@@ -57,6 +57,12 @@ lite_component("demo") {
     # "39_smoke:template",
     # "40_temp_sense:template",
     # "41_light_sense:template",
-    "42_ps2:template",
+    # "42_ps2:template",
+    
+    # "44_wifi_led_server:template",
+    # "45_temp_humi_tcp_server:template",
+    # "46_wifi_check:template",
+    # "47_servo_io6:template",
+    "60_multi_service_hub:template",
   ]
 }

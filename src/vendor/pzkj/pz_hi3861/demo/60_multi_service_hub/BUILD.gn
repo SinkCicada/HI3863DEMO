@@ -1,0 +1,19 @@
+static_library("template") {
+    sources = [
+        "template.c",
+        "multi_service_hub.c",
+        "//vendor/pzkj/pz_hi3861/demo/47_servo_io6/door_ctrl.c",
+        "//vendor/pzkj/pz_hi3861/demo/47_servo_io6/servo_io6.c",
+        "//vendor/pzkj/pz_hi3861/common/bsp/src/bsp_wifi.c",
+        "//vendor/pzkj/pz_hi3861/common/bsp/src/bsp_dht11.c",
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "//device/hisilicon/hispark_pegasus/hi3861_adapter/kal/cmsis",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//vendor/pzkj/pz_hi3861/common/bsp/include",
+        "//vendor/pzkj/pz_hi3861/demo/47_servo_io6",
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    ]
+}
