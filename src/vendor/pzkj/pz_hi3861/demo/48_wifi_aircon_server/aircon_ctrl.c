@@ -15,6 +15,13 @@
 #define AIRCON_UART_RX_GPIO HI_GPIO_IDX_1
 
 #define AIRCON_UART_BAUD 115200
+#define AIRCON_FRAME_HEAD 0x68
+#define AIRCON_FRAME_TAIL 0x16
+#define AIRCON_MODULE_ADDR 0xFF
+#define AIRCON_FUNC_SEND_EXT 0x22
+#define AIRCON_FRAME_OVERHEAD 7
+#define AIRCON_FRAME_BUF_LEN 1024
+#define AIRCON_FRAME_WRITE_CHUNK 96
 
 static const unsigned char g_aircon_power_on_code[] = {
     0xA2, 0x04, 0xAD, 0x04, 0x3E, 0xD1, 0x01, 0x3E, 0x48, 0x42, 0xD0, 0x01,
@@ -77,6 +84,49 @@ static const unsigned char g_aircon_power_off_code[] = {
 static unsigned int g_aircon_current_baud = 0;
 static unsigned char g_aircon_state = AIRCON_STATE_UNKNOWN;
 
+static unsigned char aircon_calc_checksum(const unsigned char *payload, unsigned int payload_len)
+{
+    unsigned int i;
+    unsigned int sum = AIRCON_MODULE_ADDR + AIRCON_FUNC_SEND_EXT;
+
+    for (i = 0; i < payload_len; ++i) {
+        sum += payload[i];
+    }
+
+    return (unsigned char)(sum & 0xFFU);
+}
+
+static int aircon_build_afn22_frame(const unsigned char *payload, unsigned int payload_len,
+    unsigned char *frame, unsigned int frame_buf_len)
+{
+    unsigned int total_len;
+    int ret;
+
+    if (payload == HI_NULL || frame == HI_NULL || payload_len == 0) {
+        return AIRCON_CTRL_RET_FAIL;
+    }
+
+    total_len = payload_len + AIRCON_FRAME_OVERHEAD;
+    if (frame_buf_len < total_len) {
+        return AIRCON_CTRL_RET_FAIL;
+    }
+
+    frame[0] = AIRCON_FRAME_HEAD;
+    frame[1] = (unsigned char)(total_len & 0xFFU);
+    frame[2] = (unsigned char)((total_len >> 8) & 0xFFU);
+    frame[3] = AIRCON_MODULE_ADDR;
+    frame[4] = AIRCON_FUNC_SEND_EXT;
+
+    ret = memcpy_s(&frame[5], frame_buf_len - 5, payload, payload_len);
+    if (ret != EOK) {
+        return AIRCON_CTRL_RET_FAIL;
+    }
+
+    frame[5 + payload_len] = aircon_calc_checksum(payload, payload_len);
+    frame[6 + payload_len] = AIRCON_FRAME_TAIL;
+    return (int)total_len;
+}
+
 static int aircon_uart_open(unsigned int baud_rate)
 {
     hi_uart_attribute attr;
@@ -112,22 +162,40 @@ static int aircon_uart_open(unsigned int baud_rate)
 
 static int aircon_ctrl_send_raw(const unsigned char *data, unsigned int len, const char *tag)
 {
+    unsigned char frame[AIRCON_FRAME_BUF_LEN];
+    int frame_len;
+    unsigned int offset = 0;
     int write_len;
 
     if (data == HI_NULL || len == 0) {
         return AIRCON_CTRL_RET_FAIL;
     }
 
-    write_len = hi_uart_write(AIRCON_UART_ID, data, len);
-    printf("[ac-uart] direct-send tag=%s baud=%u len=%u write=%d\r\n",
-        tag, g_aircon_current_baud, len, write_len);
-    if (write_len != (int)len) {
-        printf("[ac-uart] direct-send failed tag=%s want=%u got=%d\r\n",
-            tag, len, write_len);
+    frame_len = aircon_build_afn22_frame(data, len, frame, sizeof(frame));
+    if (frame_len <= 0) {
+        printf("[ac-uart] build AFN22 frame failed tag=%s payload_len=%u\r\n", tag, len);
         return AIRCON_CTRL_RET_FAIL;
     }
 
-    printf("[ac-uart] raw code sent, no module ack required\r\n");
+    while (offset < (unsigned int)frame_len) {
+        unsigned int chunk_len = (unsigned int)frame_len - offset;
+        if (chunk_len > AIRCON_FRAME_WRITE_CHUNK) {
+            chunk_len = AIRCON_FRAME_WRITE_CHUNK;
+        }
+
+        write_len = hi_uart_write(AIRCON_UART_ID, &frame[offset], chunk_len);
+        printf("[ac-uart] AFN22-send tag=%s baud=%u payload_len=%u frame_len=%d offset=%u chunk=%u write=%d checksum=%02X\r\n",
+            tag, g_aircon_current_baud, len, frame_len, offset, chunk_len, write_len, frame[frame_len - 2]);
+        if (write_len != (int)chunk_len) {
+            printf("[ac-uart] AFN22-send failed tag=%s offset=%u want=%u got=%d\r\n",
+                tag, offset, chunk_len, write_len);
+            return AIRCON_CTRL_RET_FAIL;
+        }
+
+        offset += chunk_len;
+    }
+
+    printf("[ac-uart] AFN22 frame sent in chunks, no module ack required\r\n");
     return AIRCON_CTRL_RET_OK;
 }
 
@@ -139,7 +207,7 @@ int aircon_ctrl_init(void)
 
     g_aircon_state = AIRCON_STATE_UNKNOWN;
     printf("[ac] uart ready on GPIO0/1, baud=%u\r\n", g_aircon_current_baud);
-    printf("[ac] mode=direct_raw_code, on_len=%u, off_len=%u\r\n",
+    printf("[ac] mode=AFN22 external-code frame, on_len=%u, off_len=%u\r\n",
         (unsigned int)sizeof(g_aircon_power_on_code),
         (unsigned int)sizeof(g_aircon_power_off_code));
     return AIRCON_CTRL_RET_OK;
