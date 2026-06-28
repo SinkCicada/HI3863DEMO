@@ -65,7 +65,8 @@ board_cflags = [
   "-DLOS_CONFIG_IPERF3",
   "-DCMSIS_OS_VER=2",
   "-DSECUREC_ENABLE_SCANF_FILE=0",
-  "-DCONFIG_AT_COMMAND",
+  # UART1 is used by the infrared module in this project, so disable the
+  # built-in AT command task that would otherwise occupy and read from UART1.
   "-DPRODUCT_CFG_CHIP_VER_STR=Hi3861V100",
   "-DCHIP_VER_Hi3861",
   "-DPRODUCT_CFG_SOFT_VER_STR=Hi3861",

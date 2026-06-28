@@ -99,6 +99,17 @@ static int send_result_text(int client_fd, const char *result,
     return send_all_text(client_fd, send_buf);
 }
 
+static const char *result_text_from_ret(int ret)
+{
+    if (ret == AIRCON_CTRL_RET_OK) {
+        return "OK";
+    }
+    if (ret == AIRCON_CTRL_RET_SENT_NO_ACK) {
+        return "WARN";
+    }
+    return "ERR";
+}
+
 static const char *skip_space(const char *text)
 {
     while (*text == ' ' || *text == '\t') {
@@ -137,7 +148,8 @@ static int handle_aircon_command(int client_fd, char *cmd_buf)
             sizeof(g_wifi_aircon_server_status.last_action), "ON");
         ret = aircon_ctrl_power_on();
         g_wifi_aircon_server_status.last_error = ret;
-        return send_result_text(client_fd, (ret == 0) ? "OK" : "ERR", "ON", ret);
+        printf("[ac-net] action=ON ret=%d\r\n", ret);
+        return send_result_text(client_fd, result_text_from_ret(ret), "ON", ret);
     }
 
     if (strcmp(action, "OFF") == 0) {
@@ -145,7 +157,8 @@ static int handle_aircon_command(int client_fd, char *cmd_buf)
             sizeof(g_wifi_aircon_server_status.last_action), "OFF");
         ret = aircon_ctrl_power_off();
         g_wifi_aircon_server_status.last_error = ret;
-        return send_result_text(client_fd, (ret == 0) ? "OK" : "ERR", "OFF", ret);
+        printf("[ac-net] action=OFF ret=%d\r\n", ret);
+        return send_result_text(client_fd, result_text_from_ret(ret), "OFF", ret);
     }
 
     if (strcmp(action, "QUERY") == 0 || strcmp(action, "STATUS") == 0) {
@@ -261,6 +274,7 @@ int wifi_aircon_server_start(void)
         }
 
         g_wifi_aircon_server_status.tcp_client_connected = 1;
+        printf("[ac-net] client accepted\r\n");
         (void)memset_s(cmd_buf, sizeof(cmd_buf), 0, sizeof(cmd_buf));
         cmd_len = recv(client_fd, cmd_buf, sizeof(cmd_buf) - 1, 0);
         if (cmd_len > 0) {

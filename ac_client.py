@@ -7,10 +7,22 @@ DEFAULT_PORT = 8000
 
 
 def send_command(ip, port, command, timeout):
-    with socket.create_connection((ip, port), timeout=timeout) as sock:
+    try:
+        sock = socket.create_connection((ip, port), timeout=timeout)
+    except TimeoutError as exc:
+        raise TimeoutError(f"connect timed out to {ip}:{port}") from exc
+    except OSError:
+        raise
+
+    with sock:
         sock.settimeout(timeout)
         sock.sendall((command + "\n").encode("utf-8"))
-        data = sock.recv(256)
+        try:
+            data = sock.recv(256)
+        except TimeoutError as exc:
+            raise TimeoutError(
+                f"connected to {ip}:{port}, but reply timed out after {timeout:.1f}s"
+            ) from exc
         if not data:
             raise ConnectionError("server closed connection without reply")
         return data.decode("utf-8", errors="replace").strip()

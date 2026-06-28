@@ -17,21 +17,12 @@
 #define AIRCON_GROUP_POWER_ON 1
 #define AIRCON_GROUP_POWER_OFF 2
 #define AIRCON_FRAME_LEN 8
-#define AIRCON_ACK_TIMEOUT_MS 120
+#define AIRCON_ACK_TIMEOUT_MS 30
 #define AIRCON_DRAIN_TIMEOUT_MS 10
+#define AIRCON_UART_BAUD 115200
 
-static const unsigned int g_aircon_baud_list[] = {
-    9600,
-    19200,
-    38400,
-    57600,
-    115200,
-};
-
-static unsigned int g_aircon_baud_index = 0;
 static unsigned int g_aircon_current_baud = 0;
 static unsigned char g_aircon_state = AIRCON_STATE_UNKNOWN;
-static unsigned char g_aircon_uart_ready = 0;
 
 static unsigned short modbus_crc16(const unsigned char *data, unsigned int len)
 {
@@ -101,7 +92,6 @@ static int aircon_uart_open(unsigned int baud_rate)
     }
 
     g_aircon_current_baud = baud_rate;
-    g_aircon_uart_ready = 1;
     return 0;
 }
 
@@ -130,6 +120,8 @@ static int aircon_uart_exchange(const unsigned char *tx_buf, unsigned int tx_len
     aircon_uart_drain();
 
     write_len = hi_uart_write(AIRCON_UART_ID, tx_buf, tx_len);
+    printf("[ac-uart] tx baud=%u len=%u write=%d\r\n",
+        g_aircon_current_baud, tx_len, write_len);
     if (write_len != (int)tx_len) {
         printf("[ac-uart] write failed, want=%u, got=%d\r\n", tx_len, write_len);
         return -1;
@@ -156,48 +148,38 @@ static int aircon_uart_exchange(const unsigned char *tx_buf, unsigned int tx_len
 static int aircon_try_emit_frame(const unsigned char *frame, unsigned int len)
 {
     unsigned char ack[AIRCON_FRAME_LEN];
-    unsigned int try_count;
-    unsigned int list_count;
+    int ret;
 
-    list_count = sizeof(g_aircon_baud_list) / sizeof(g_aircon_baud_list[0]);
-    for (try_count = 0; try_count < list_count; ++try_count) {
-        unsigned int index;
-        unsigned int baud_rate;
-
-        index = (g_aircon_baud_index + try_count) % list_count;
-        baud_rate = g_aircon_baud_list[index];
-
-        if (aircon_uart_open(baud_rate) != 0) {
-            continue;
+    ret = aircon_uart_exchange(frame, len, ack, len);
+    if (ret != 0) {
+        hi_s32 write_len = hi_uart_write(AIRCON_UART_ID, frame, len);
+        if (write_len == (hi_s32)len) {
+            printf("[ac-uart] no ack at baud=%u, but frame sent\r\n", g_aircon_current_baud);
+            printf("[ac-uart] check module TX/RX/GND or confirm module does not return reply\r\n");
+            return AIRCON_CTRL_RET_SENT_NO_ACK;
         }
-
-        if (aircon_uart_exchange(frame, len, ack, len) != 0) {
-            continue;
-        }
-
-        if (memcmp(frame, ack, len) != 0) {
-            printf("[ac-uart] ack mismatch at baud=%u\r\n", baud_rate);
-            continue;
-        }
-
-        g_aircon_baud_index = index;
-        printf("[ac-uart] ack ok, baud=%u\r\n", baud_rate);
-        return 0;
+        return AIRCON_CTRL_RET_FAIL;
     }
 
-    return -1;
+    if (memcmp(frame, ack, len) != 0) {
+        printf("[ac-uart] ack mismatch at baud=%u\r\n", g_aircon_current_baud);
+        return AIRCON_CTRL_RET_SENT_NO_ACK;
+    }
+
+    printf("[ac-uart] ack ok, baud=%u\r\n", g_aircon_current_baud);
+    return AIRCON_CTRL_RET_OK;
 }
 
 int aircon_ctrl_init(void)
 {
-    if (aircon_uart_open(g_aircon_baud_list[g_aircon_baud_index]) != 0) {
-        return -1;
+    if (aircon_uart_open(AIRCON_UART_BAUD) != 0) {
+        return AIRCON_CTRL_RET_FAIL;
     }
 
     g_aircon_state = AIRCON_STATE_UNKNOWN;
-    printf("[ac] uart ready on GPIO0/1, initial baud=%u\r\n", g_aircon_current_baud);
+    printf("[ac] uart ready on GPIO0/1, baud=%u\r\n", g_aircon_current_baud);
     printf("[ac] group1=power_on, group2=power_off\r\n");
-    return 0;
+    return AIRCON_CTRL_RET_OK;
 }
 
 int aircon_ctrl_emit_group(unsigned short group_no)
@@ -205,7 +187,7 @@ int aircon_ctrl_emit_group(unsigned short group_no)
     unsigned char frame[AIRCON_FRAME_LEN];
 
     if (group_no == 0) {
-        return -1;
+        return AIRCON_CTRL_RET_FAIL;
     }
 
     aircon_build_emit_group_frame(group_no, frame);
@@ -215,22 +197,26 @@ int aircon_ctrl_emit_group(unsigned short group_no)
 
 int aircon_ctrl_power_on(void)
 {
-    if (aircon_ctrl_emit_group(AIRCON_GROUP_POWER_ON) != 0) {
-        return -1;
+    int ret = aircon_ctrl_emit_group(AIRCON_GROUP_POWER_ON);
+
+    if (ret == AIRCON_CTRL_RET_FAIL) {
+        return AIRCON_CTRL_RET_FAIL;
     }
 
     g_aircon_state = AIRCON_STATE_ON;
-    return 0;
+    return ret;
 }
 
 int aircon_ctrl_power_off(void)
 {
-    if (aircon_ctrl_emit_group(AIRCON_GROUP_POWER_OFF) != 0) {
-        return -1;
+    int ret = aircon_ctrl_emit_group(AIRCON_GROUP_POWER_OFF);
+
+    if (ret == AIRCON_CTRL_RET_FAIL) {
+        return AIRCON_CTRL_RET_FAIL;
     }
 
     g_aircon_state = AIRCON_STATE_OFF;
-    return 0;
+    return ret;
 }
 
 unsigned int aircon_ctrl_get_baud(void)
